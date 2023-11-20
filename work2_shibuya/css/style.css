@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #000;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+/* ここから課題 */
+
+/* work1_1 */
+.blueBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 960px;
+    margin: 0 auto;
+        }
+
+.blueBox div {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 30px;
+    background-color: blue;
+}
+
+/* work1_2 */
+.redBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 960px;
+    margin: 0 auto;
+}
+
+.redBox div {
+    display:  flex;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+    background-color: red;
+}
+
+/* work1_3 */
+.nab {
+    display: flex;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.title {
+    padding: 10px;
+}
+
+.nab ul {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nab ul li {
+    color: black;
+    border-right: 1px solid black;
+    padding: 0 20px;
+}
+
+.nab ul li:last-child {
+    border-right: 0;
+}
+
+/* 画面サイズが767px以下になったらここに書いているcssが適用される */
+
+@media screen and (max-width:767px) {
+    .nab {
+        display: block;
+    }
+
+    .nab ul {
+        display: block;
+        margin: 10px;
+    }
+
+    .nab ul li{
+        width: 100%;
+        padding: 10px;
+        border-bottom: 1px solid black;
+    }
+}
