@@ -45,13 +45,13 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 960px;
+    max-width: 960px;
     margin: 0 auto;
         }
 
 .blueBox div {
     display: flex;
-    width: 300px;
+    width: 31%;
     height: 300px;
     margin-bottom: 30px;
     background-color: blue;
@@ -62,13 +62,13 @@ img {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 960px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
 .redBox div {
     display:  flex;
-    width: 300px;
+    width: 31%;
     height: 300px;
     margin-bottom: 20px;
     background-color: red;
@@ -116,7 +116,8 @@ img {
 
     .nab ul li{
         width: 100%;
-        padding: 10px;
+        padding: 20px;
         border-bottom: 1px solid black;
+        border-right: none;
     }
 }
