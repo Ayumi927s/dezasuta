@@ -20,7 +20,7 @@ li {
     line-height: 1;
     color: #000;
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
-    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 }
 
 a {
@@ -30,7 +30,7 @@ a {
 
 ul {
     list-style: none;
-}
+}  
 
 img {
     max-width: 100%;
@@ -47,7 +47,7 @@ img {
     align-items: center;
     max-width: 960px;
     margin: 0 auto;
-        }
+}
 
 .blueBox div {
     display: flex;
@@ -67,7 +67,7 @@ img {
 }
 
 .redBox div {
-    display:  flex;
+    display: flex;
     width: 31%;
     height: 300px;
     margin-bottom: 20px;
@@ -75,7 +75,7 @@ img {
 }
 
 /* work1_3 */
-.nab {
+.nav {
     display: flex;
     align-items: center;
     max-width: 960px;
@@ -86,36 +86,35 @@ img {
     padding: 10px;
 }
 
-.nab ul {
+.nav ul {
     display: flex;
     align-items: center;
     margin-left: auto;
 }
 
-.nab ul li {
+.nav ul li {
     color: black;
     border-right: 1px solid black;
     padding: 0 20px;
 }
 
-.nab ul li:last-child {
+.nav ul li:last-child {
     border-right: 0;
 }
 
 /* 画面サイズが767px以下になったらここに書いているcssが適用される */
 
-@media screen and (max-width:767px) {
-    .nab {
+@media screen and (max-width: 767px) {
+    .nav {
         display: block;
     }
 
-    .nab ul {
+    .nav ul {
         display: block;
         margin: 10px;
     }
 
-    .nab ul li{
-        width: 100%;
+    .nav ul li {
         padding: 20px;
         border-bottom: 1px solid black;
         border-right: none;
