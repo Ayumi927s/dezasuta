@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  color: #000;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  border: none;
+}
+
+/* ここから課題 */
+
+.service {
+    max-width: 960px;
+    padding: 30px;
+    background-color: #eeeeee;
+}
+.service h1 {
+  text-align: center;
+  margin: 30px;
+  color:#088272;
+}
+
+.service_List{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.sv{
+  width: 31%;
+  background-color: #fff;
+  letter-spacing: 5px
+}
+
+.sv h2{
+  margin: 10px;
+  border-left: 5px solid #088272;
+  color: #088272;
+}
+
+.sv p{
+  font-size: 13px;
+}
+
+@media screen and (max-width: 399px){
+
+  .service_List{
+    display: block;
+  }
+
+  .sv{
+    width: 100%;
+    margin: 20px auto;
+  }
+}
