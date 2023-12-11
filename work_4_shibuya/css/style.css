@@ -20,7 +20,9 @@ li {
     line-height: 1;
     /*デフォルトの文字色、font-familyを予め当てておく*/
     color: #4f260b;
-    font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+    font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+        "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+        "ＭＳ 明朝", serif;
 }
 
 a {
@@ -50,10 +52,12 @@ body {
     background-color: #e8d9bf;
 }
 
-
 .header_slider {
     max-width: 100%;
-    margin-bottom: 24px;
+}
+
+.header_slider img {
+    width: 100%;
 }
 
 .header_wrap {
@@ -80,48 +84,147 @@ body {
 .pc_nav ul li {
     width: 105px;
     margin-left: 55px;
-    color: #FFF;
+    color: #fff;
     text-align: center;
-    font-weight:bold;
+    font-weight: bold;
     font-size: 18px;
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
-    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
-;
-
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 }
 
+.sp_btn,
+.sp_nav {
+    display: none;
+}
+
+@media screen and (max-width: 1100px) {
+    .pc_nav {
+        display: none;
+    }
+    /* ハンバーガーメニュー */
+    .sp_btn {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        display: block;
+        height: 23px;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .sp_btn span {
+        position: relative;
+        top: 10px;
+        display: block;
+        width: 33px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: #fff;
+        transition: 0.3s;
+    }
+
+    .sp_btn span::before,
+    .sp_btn span::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 33px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: #fff;
+        transition: 0.3s;
+    }
+    .sp_btn span::before {
+        bottom: 10px;
+    }
+
+    .sp_btn span::after {
+        top: 10px;
+    }
+
+    /* ハンバーガーを閉じる */
+
+    .sp_btn.open span {
+        background: transparent;
+    }
+
+    .sp_btn.open span::before {
+        bottom: 0px;
+        transform: rotate(45deg);
+    }
+
+    .sp_btn.open span::after {
+        top: 0px;
+        transform: rotate(135deg);
+    }
+
+    /* ハンバーガーメニュー */
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+    }
+
+    .sp_nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .sp_nav ul li {
+        padding: 20px;
+        color: #fff;
+        font-size: 18px;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",
+            "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    }
+}
 main {
     max-width: 1000px;
     margin: 0 auto;
 }
 
+section h2 {
+    height: 78px;
+    text-align: center;
+}
+
+section h2 img {
+    height: 100%;
+    text-align: center;
+}
+
 .text_content {
     text-align: center;
-    margin-top: 24px;
-    margin-bottom: 49PX;
+    margin-top: 94px;
 }
 
 .main_catch {
-    margin: 48px auto 20px;
+    margin: 48px auto 0;
     font-size: 30px;
-    line-height: 400%;
+    line-height: 3.86;
     font-feature-settings: "palt";
 }
 
 .text_content h2 {
     /* width: 87%; */
-    margin: 20px auto 15px ;
+    margin: 38px auto 0px;
     font-size: 82px;
-    font-weight:normal;
-    line-height: 130%;
+    font-weight: normal;
+    line-height: 1.17;
     font-feature-settings: "palt";
 }
 
 .note {
-    margin: 15px auto 49px;
+    margin: 30px auto 0px;
     font-size: 23px;
-    line-height: 180%;
-    font-feature-settings: "palt"
+    line-height: 1.65;
+    font-feature-settings: "palt";
 }
 
 .title img {
@@ -130,104 +233,117 @@ main {
 
 .about_wrap {
     display: flex;
+    justify-content: space-between;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 98px auto 0;
+    margin-top: 98px;
 }
 
 .about_wrapper {
-    margin-top: 55px;
-    margin-bottom: 49px;
-
+    width: 41%;
+    margin-top: 67px;
 }
 
 .about_left {
     width: 50%;
     margin-right: 40px;
-    border-bottom-right-radius: 45px
+}
+
+.about_left img {
+    border-bottom-right-radius: 82px;
 }
 
 .about_wrapper img {
     margin: 28px 0 24px 0;
-    
 }
 
 .about_title {
     text-align: left;
 }
 
-.title {
-    text-align: center;
-}
-
 .about_text {
     width: 350px;
+    margin-top: 65px;
     font-size: 44px;
-    line-height: 184%;
-    font-feature-settings: "palt"
+    line-height: 1.38;
+    font-feature-settings: "palt";
+    font-weight: normal;
 }
 
 .about_p {
-    margin: 11px;
+    margin-top: 35px;
     font-size: 16px;
+    line-height: 1.62;
+    font-feature-settings: "palt";
 }
 
 .menu_wrap {
     max-width: 1000px;
-    margin:  0 auto;
-    
+    margin: 105px auto 0;
 }
 
 .menu_wrap img {
     text-align: center;
     margin-top: 95px;
-    margin-bottom: 38px;
 }
 
 .menu_wrapper {
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: 49px auto 0;
 }
 
 .menu_wrapper img {
-    border-top-right-radius: 35px
+    border-top-right-radius: 35px;
 }
 
 .menu_item {
-    margin-top: -17px;
-    margin-bottom: 10px;
+    margin-top: -4px;
+    padding-left: 12px;
+    padding-bottom: 25px;
     color: #d30202;
     font-size: 38px;
-    line-height: 120%;
+    line-height: 0.57;
+}
+.menu_list {
+    width: 30%;
 }
 
+.text {
+    font-size: 17px;
+    line-height: 1.23;
+}
 .gallery_wrap {
     max-width: 100%;
-    margin-top: 38px;
+    margin-top: 103px;
 }
 .gallery_photo {
     display: flex;
-    width: 20%;
-    margin-top: 16px;
-    margin-bottom: 60px;
+    margin-top: 25px;
+}
+
+.gallery_img {
+    width: 100%;
+}
+
+.gallery_img img {
+    width: 100%;
 }
 
 .event-wrap {
     max-width: 1000px;
     justify-content: center;
-    margin: 0 auto;
-    margin-top: 30px;
-    
+    margin: 71px auto 0;
 }
 
 .event_list {
     display: flex;
     text-align: center;
     justify-content: center;
-    height: 196px;
+    align-items: center;
     padding: 35px;
     font-size: 23px;
-    line-height: 230%;
+    line-height: 1.95;
     border: 3px solid #4f260b;
     background-color: white;
 }
@@ -237,19 +353,28 @@ main {
     flex-wrap: wrap;
     flex-wrap: nowrap;
     text-align: center;
-    margin:  0 auto;    
+    margin: 0 auto;
+}
+
+.content_news a {
+    text-decoration: underline;
+}
+
+.event_list {
+    margin-top: 40px;
 }
 
 .event_list ul {
-    font-size: 100%;
+    width: fit-content;
+    margin: 0 auto;
 }
-
-.event_content {
-    border-bottom: 1px solid #4f260b;
+.event_list ul li {
+    margin-bottom: 23px;
 }
 
 .content_news {
-    font-size: 23%;
+    font-size: 23px;
+    line-height: 1.95;
 }
 
 .content_news .date {
@@ -263,18 +388,19 @@ main {
 }
 
 .access_wrap {
-    margin-top: 68px;
+    margin-top: 79px;
 }
 
 iframe {
     width: 100%;
-    margin-top: 37px;
+    height: 470px;
+    margin-top: 83px;
 }
 
 .footer_wrap {
     max-width: 1000px;
     margin: 0 auto;
-    margin-top: 83px;
+    padding-top: 83px;
 }
 
 .address_warp {
@@ -283,19 +409,23 @@ iframe {
     margin: 0 auto;
 }
 
-.address_logo {
+.footer {
+    background-color: #fff;
+}
+
+.footer_img {
+    width: 226px;
     color: #4f260b;
 }
 
-.address_item{
-    margin-left: 30px;
+.address_item {
+    margin-left: 69px;
 }
 
 .address_item li {
     color: black;
     font-size: 20px;
-    line-height: 260%;
-    
+    line-height: 1.95;
 }
 
 .copy {
@@ -305,20 +435,13 @@ iframe {
     font-size: 16px;
     line-height: 287%;
     margin-top: 72px;
-    margin-bottom: 77px;
+    padding-bottom: 77px;
 }
 
 #page_top {
     height: 125px;
     width: 125px;
     position: fixed;
-    right: 263px;
-    bottom: 230px;
+    right: 40px;
+    bottom: 40px;
 }
-
-/* 1.titleのimgタグの大きさの調整方法
-    2.line-heightの計算方法がわかりません。
-    　pt→pxに変換しフォントと割って指定するがいい大きさにならない
-    3.eventのfont-sizeをカンプ通りに指定すると小さくなる
-    4.Firstビューとgalleryの画像が画面幅いっぱいに広がらない
-    5.googleMapの高さは指定するのでしょうか*/

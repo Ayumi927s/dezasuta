@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>デザインカフェ</title>
     <meta name="description" content="デザインカフェのサイトです。">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
+
 <body>
 
     <header>
@@ -17,13 +20,24 @@
             <h1 class="header_logo"><img src="images/design_cafe_logo_header@2x.png" alt="DESIGN CAFE"></h1>
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="#ABOUT">ABOUT US</a></li>
-                    <li><a href="#MENU">MENU</a></li>
-                    <li><a href="#GALLERY">GALLERY</a></li>
-                    <li><a href="#EVENT">EVENT</a></li>
-                    <li><a href="#ACCESS">ACCESS</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#access">ACCESS</a></li>
                 </ul>
             </nav>
+            <div class="sp_btn"><span></span></div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#access">ACCESS</a></li>
+                </ul>
+            </nav>
+
         </div>
     </header>
     <main>
@@ -33,82 +47,87 @@
             <p class="note">毎日を丁 寧に大 切に過ごしたい。だからこそ一 杯 一 杯 丁 寧にコーヒーを入れ <br>足を運んでくれるお客さんには落ち着く空 間とこだわりのコーヒーを提 供したい。</p>
         </div>
     </main>
-    <section id="ABOUT">
+
+    <section id="about">
         <div class="about_wrap">
-            <img src="images/pc_about-100.jpg" alt="コーヒーで乾杯" class="about_left">
+            <div class="about_left">
+                <img src="images/pc_about-100.jpg" alt="コーヒーで乾杯">
+            </div>
             <div class="about_wrapper">
-                <div class="title about_title">
-                <img src="images/about_us@2x.png" alt="aboutの表題">
-                </div>
+                <h2 class="title about_title">
+                    <img src="images/about_us@2x.png" alt="aboutの表題">
+                </h2>
                 <h3 class="about_text">私たちが提供する<br>こだわりのコーヒー</h3>
-                <p class="about_p">サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。</p>
+                <p class="about_p">
+                    サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
+                </p>
             </div>
         </div>
     </section>
 
-    <section id="MENU">
+    <section id="menu">
         <div class="menu_wrap">
-            <div class="title">
-            <img src="images/menu@2x.png" alt="MENUの表題">
-            </div>
-        <div class="menu_wrapper">
-            <div class="drink_warp">
-                <img src="images/pc_menu_drink-100.jpg" alt="ドリンクメニュー">                
-                <p class="menu_item">Drink</p>
-                <p class="text">ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
-            </div>
-            <div class="food_warp">
-                <img src="images/pc_menu_food-100.jpg" alt="フードメニュー">
-                <p class="menu_item">Food</p>
-                <p class="text">フードメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
-            </div>
-            <div class="sweets_wrap">
+            <h2 class="title">
+                <img src="images/menu@2x.png" alt="MENUの表題">
+            </h2>
+            <div class="menu_wrapper">
+                <div class="menu_list">
+                    <img src="images/pc_menu_drink-100.jpg" alt="ドリンクメニュー">
+                    <p class="menu_item">Drink</p>
+                    <p class="text">ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
+                </div>
+                <div class="menu_list">
+                    <img src="images/pc_menu_food-100.jpg" alt="フードメニュー">
+                    <p class="menu_item">Food</p>
+                    <p class="text">フードメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
+                </div>
+                <div class="menu_list">
                     <img src="images/pc_menu_sweets-100.jpg" alt="スイーツメニュー">
                     <p class="menu_item">Sweets</p>
                     <p class="text">スイーツメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
+                </div>
             </div>
-        </div>
-        
+
         </div>
     </section>
-    <section id="GALLERY">
+    <section id="gallery">
         <div class="gallery_wrap">
-            <div class="title">
-            <img src="images/gallery@2x.png" alt="GALLERYの表題">
-            </div>
+            <h2 class="title">
+                <img src="images/gallery@2x.png" alt="GALLERYの表題">
+            </h2>
             <div class="gallery_photo">
-                <img src="images/pc_gallary_05-100.jpg" alt="店内の様子">
-                <img src="images/pc_gallary_04-100.jpg" alt="コーヒー豆">
-                <img src="images/pc_gallary_03-100.jpg" alt="カウンターの様子">
-                <img src="images/pc_gallary_02-100.jpg" alt="ランプ">
-                <img src="images/pc_gallary_01-100.jpg" alt="ラテアート">
+                <div class="gallery_img"><img src="images/pc_gallary_05-100.jpg" alt="店内の様子"></div>
+                <div class="gallery_img"><img src="images/pc_gallary_04-100.jpg" alt="コーヒー豆"></div>
+                <div class="gallery_img"><img src="images/pc_gallary_03-100.jpg" alt="カウンターの様子"></div>
+                <div class="gallery_img"><img src="images/pc_gallary_02-100.jpg" alt="ランプ"></div>
+                <div class="gallery_img"><img src="images/pc_gallary_01-100.jpg" alt="ラテアート"></div>
             </div>
         </div>
     </section>
 
-    <section id="EVENT">
+    <section id="event">
         <div class="event-wrap">
-            <div class="title">
-            <img src="images/event@2x.png" alt="イベントの表題">
-            </div>
+            <h2 class="title">
+                <img src="images/event@2x.png" alt="イベントの表題">
+            </h2>
             <div class="event_list">
                 <ul>
                     <li class="content_news">
                         <span class="date">2020.06.23</span>
                         <a href="#">
-                            <p class="event_content">7月はイベント出店のため0/0お休みします</p>
+                            7月はイベント出店のため0/0お休みします
                         </a>
                     </li>
                     <li class="content_news">
                         <span class="date">2020.03.15</span>
                         <a href="#">
-                            <p class="event_content">春の新商品新発売。話題のあのブランドとコラボ</p>
+                            春の新商品新発売。話題のあのブランドとコラボ
                         </a>
                     </li>
                     <li class="content_news">
                         <span class="date">2020.02.06</span>
                         <a href="#">
-                            <p class="event_content">コーヒーの日で30%OFFイベントを開催	&lbrack;3日間限定&rbrack;</p>
+                            コーヒーの日で30%OFFイベントを開催 &lbrack;3日間限定&rbrack;
                         </a>
                     </li>
                 </ul>
@@ -116,20 +135,25 @@
         </div>
     </section>
 
-    <section id="ACCESS">
+    <section id="access">
         <div class="access_wrap">
-            <div class="title">
-            <img src="images/access@2x.png" alt="アクセスの表題">
-            </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26068.656991807533!2d139.07518115!3d35.241771050000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019a3750949ef0f%3A0xf9772c36b4758dcd!2z56We5aWI5bed55yMIOeuseaguea4qeaziQ!5e0!3m2!1sja!2sjp!4v1701869778766!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>        
+            <h2 class="title">
+                <img src="images/access@2x.png" alt="アクセスの表題">
+            </h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26068.656991807533!2d139.07518115!3d35.241771050000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019a3750949ef0f%3A0xf9772c36b4758dcd!2z56We5aWI5bed55yMIOeuseaguea4qeaziQ!5e0!3m2!1sja!2sjp!4v1701869778766!5m2!1sja!2sjp"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </section>
 
     <footer class="footer">
         <div class="footer_wrap">
             <div class="address_warp">
                 <div>
-                    <img src="images/design_cafe_logo_header@2x.png" alt="logo" class="address_logo">
+                    <div class="footer_img">
+                        <img src="images/design_cafe_logo_footer@2x.png" alt="logo">
+                    </div>
                 </div>
                 <div class="address_item">
                     <ul>
@@ -140,13 +164,24 @@
                     </ul>
                 </div>
             </div>
-        <div class="copy">
-            <small>&copy; 2021 DESIGN CAFE</small>
+            <div class="copy">
+                <small>&copy; 2021 DESIGN CAFE</small>
             </div>
         </div>
     </footer>
     <div id="page_top"><a href="#">
-        <img src="images/to_top@2x.png" alt="上に戻る"></a>
+            <img src="images/to_top@2x.png" alt="上に戻る"></a>
     </div>
+
+    <script>
+        $(function () {
+            $('.sp_btn, .sp_nav li').on('click', function () {
+                //ここの中に記述
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open');
+            });
+        });
+    </script>
 </body>
+
 </html>
