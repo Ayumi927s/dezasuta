@@ -184,6 +184,7 @@ body {
             "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
     }
 }
+
 main {
     max-width: 1000px;
     margin: 0 auto;
@@ -201,7 +202,6 @@ section h2 img {
 
 .text_content {
     text-align: center;
-    margin-top: 94px;
 }
 
 .main_catch {
@@ -241,7 +241,7 @@ section h2 img {
 
 .about_wrapper {
     width: 41%;
-    margin-top: 67px;
+    margin-top: 66px;
 }
 
 .about_left {
@@ -253,17 +253,12 @@ section h2 img {
     border-bottom-right-radius: 82px;
 }
 
-.about_wrapper img {
-    margin: 28px 0 24px 0;
-}
-
 .about_title {
     text-align: left;
 }
 
 .about_text {
-    width: 350px;
-    margin-top: 65px;
+    margin-top: 50px;
     font-size: 44px;
     line-height: 1.38;
     font-feature-settings: "palt";
@@ -271,7 +266,7 @@ section h2 img {
 }
 
 .about_p {
-    margin-top: 35px;
+    margin-top: 30px;
     font-size: 16px;
     line-height: 1.62;
     font-feature-settings: "palt";
@@ -284,7 +279,6 @@ section h2 img {
 
 .menu_wrap img {
     text-align: center;
-    margin-top: 95px;
 }
 
 .menu_wrapper {
@@ -294,7 +288,7 @@ section h2 img {
 }
 
 .menu_wrapper img {
-    border-top-right-radius: 35px;
+    border-top-right-radius: 41px;
 }
 
 .menu_item {
@@ -343,7 +337,6 @@ section h2 img {
     align-items: center;
     padding: 35px;
     font-size: 23px;
-    line-height: 1.95;
     border: 3px solid #4f260b;
     background-color: white;
 }
@@ -354,6 +347,7 @@ section h2 img {
     flex-wrap: nowrap;
     text-align: center;
     margin: 0 auto;
+    font-size: 23px;
 }
 
 .content_news a {
@@ -372,11 +366,6 @@ section h2 img {
     margin-bottom: 23px;
 }
 
-.content_news {
-    font-size: 23px;
-    line-height: 1.95;
-}
-
 .content_news .date {
     margin: 0;
     padding: 0 20px 0 0;
@@ -392,9 +381,10 @@ section h2 img {
 }
 
 iframe {
+    display: block;
     width: 100%;
     height: 470px;
-    margin-top: 83px;
+    margin-top: 45px;
 }
 
 .footer_wrap {
@@ -432,10 +422,10 @@ iframe {
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    font-size: 16px;
-    line-height: 287%;
     margin-top: 72px;
     padding-bottom: 77px;
+    color: black;
+    font-size: 16px;
 }
 
 #page_top {
@@ -444,4 +434,159 @@ iframe {
     position: fixed;
     right: 40px;
     bottom: 40px;
+}
+
+@media screen and (max-width: 1100px) {
+    .text_content h2 {
+        font-size: 78px;
+    }
+
+    .note {
+        font-size: 21px;
+    }
+
+    .about_text {
+        font-size: 38px;
+    }
+}
+
+.sp_fast {
+    display: none;
+}
+
+.sp_br {
+    display: none;
+}
+
+.sp_about img {
+    display: none;
+}
+
+.sp_gallery {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    section h2 {
+        height: 47px;
+        text-align: center;
+    }
+
+    .main_catch {
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 42px;
+        font-size: 17px;
+        font-feature-settings: "palt";
+    }
+
+    .text_content {
+        width: 100%;
+    }
+
+    .text_content h2 {
+        width: 100%;
+        text-align: center;
+        margin-top: 27px;
+        font-size: 38px;
+        line-height: 1.15;
+        font-feature-settings: "palt";
+    }
+
+    .note {
+        margin-top: 26px;
+        font-size: 16px;
+        line-height: 1.87;
+        font-feature-settings: "palt";
+    }
+
+    .sp_only {
+        display: block;
+    }
+
+    .title img {
+        font-size: 47px;
+    }
+
+    .about_wrap {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .about_left img {
+        display: none;
+    }
+    .sp_about img {
+        display: block;
+    }
+    .about_text {
+        margin-top: 36px;
+        font-size: 36px;
+        line-height: 1.25;
+        font-feature-settings: "palt";
+    }
+
+    .about_wrapper {
+        width: 100%;
+        margin-top: 66px;
+    }
+
+    .about_title {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .sp_about {
+        margin-top: 16px;
+    }
+
+    .about_p {
+        text-align: left;
+        margin: 35px 28px 0 28px;
+    }
+
+    .menu_wrap {
+        margin-top: 56px;
+    }
+
+    .menu_wrapper {
+        display: block;
+    }
+
+    .menu_list {
+        width: 100%;
+        margin: 24px auto 33px;
+    }
+
+    .gallery_img {
+        display: none;
+    }
+
+    .gallery_photo {
+        width: 100%;
+    }
+
+    .sp_gallery {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .content_news {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .event_list ul {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .address_warp {
+        display: block;
+        justify-content: center;
+        margin: 0 auto;
+    }
 }
