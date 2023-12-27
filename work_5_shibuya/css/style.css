@@ -201,6 +201,40 @@ body {
     margin-bottom: 0px;
 }
 
+/* ギャラリースライダー調整 */
+
+.slick-prev:before {
+    content: "";
+}
+
+.slick-prev {
+    left: 230px;
+    z-index: 1;
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-top: 3px solid #fff;
+    border-left: 3px solid #fff;
+    transform: rotate(-45deg);
+}
+
+.slick-next:before {
+    content: "";
+}
+
+.slick-next {
+    right: 230px;
+    z-index: 1;
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-top: 3px solid #fff;
+    border-left: 3px solid #fff;
+    transform: rotate(135deg);
+}
+
 main {
     max-width: 1000px;
     margin: 0 auto;
@@ -329,8 +363,18 @@ section h2 img {
     margin-top: 103px;
 }
 .gallery_photo {
-    display: flex;
     margin-top: 25px;
+}
+
+.gallery_slider {
+    max-width: 100%;
+}
+
+.gallery_slider img {
+    width: 100%;
+}
+.slide-items {
+    display: flex;
 }
 
 .gallery_img {
@@ -409,6 +453,7 @@ iframe {
     max-width: 1000px;
     margin: 0 auto;
     padding: 83px 20px 0;
+    box-sizing: border-box;
 }
 
 .address_warp {
@@ -482,6 +527,15 @@ iframe {
 }
 
 @media screen and (max-width: 767px) {
+    /* スライダー調整 */
+    .slick-next {
+        right: 25px;
+    }
+
+    .slick-prev {
+        left: 25px;
+    }
+
     .header_logo {
         width: 185px;
         font-size: 43px;
@@ -544,10 +598,12 @@ iframe {
     }
 
     .about_text {
-        margin: 36px 21px 0 21px;
+        margin-top: 36px;
+        padding: 0 21px;
         font-size: 36px;
         line-height: 1.25;
         font-feature-settings: "palt";
+        box-sizing: border-box;
     }
 
     .about_wrapper {
@@ -564,9 +620,15 @@ iframe {
         margin-top: 16px;
     }
 
+    .sp_about img {
+        width: 100%;
+    }
+
     .about_title {
         text-align: left;
-        margin: 20px 21px 0 21px;
+        margin-top: 20px;
+        padding: 0 21px;
+        box-sizing: border-box;
     }
 
     .menu_wrap {
@@ -602,7 +664,7 @@ iframe {
 
     .gallery_photo {
         width: 100%;
-        margin: 10px;
+        margin-top: 10px;
     }
 
     .sp_gallery {

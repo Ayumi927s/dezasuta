@@ -124,14 +124,19 @@
                 <img src="images/gallery@2x.png" alt="GALLERY">
             </h2>
             <div class="gallery_photo">
-                <div class="gallery_img"><img src="images/pc_gallary_05-100.jpg" alt="店内の様子"></div>
-                <div class="gallery_img"><img src="images/pc_gallary_04-100.jpg" alt="コーヒー豆"></div>
-                <div class="gallery_img"><img src="images/pc_gallary_03-100.jpg" alt="カウンターの様子"></div>
-                <div class="gallery_img"><img src="images/pc_gallary_02-100.jpg" alt="ランプ"></div>
-                <div class="gallery_img"><img src="images/pc_gallary_01-100.jpg" alt="ラテアート"></div>
-            </div>
-            <div class="sp_gallery">
-                <div class="sp_img"><img src="images/mobile_gallery-100.jpg" alt="店内の様子"></div>
+                <div class="gallery_slider">
+                    <div class="gallery_img"><img src="images/pc_gallary_05-100.jpg" alt="店内の様子"></div>
+                    <div class="gallery_img"><img src="images/pc_gallary_04-100.jpg" alt="コーヒー豆"></div>
+                    <div class="gallery_img"><img src="images/pc_gallary_03-100.jpg" alt="カウンターの様子"></div>
+                    <div class="gallery_img"><img src="images/pc_gallary_02-100.jpg" alt="ランプ"></div>
+                    <div class="gallery_img"><img src="images/pc_gallary_01-100.jpg" alt="ラテアート"></div>
+                    <div class="gallery_img"><img src="images/pc_gallary_01-100.jpg" alt="ラテアート"></div>
+                    <div class="sp_gallery">
+                        <div class="responsive_slider">
+                            <div class="sp_img"><img src="images/mobile_gallery-100.jpg" alt="店内の様子"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -216,6 +221,23 @@
                 dots: true,
                 arrows: false,
             });
+
+            $('.gallery_slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true,
+                        }
+                    }
+                ]
+            })
         });
     </script>
 </body>
