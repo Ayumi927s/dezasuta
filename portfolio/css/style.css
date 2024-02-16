@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+body {
+    background-color: #f2f7fa;
+}
+
+.header {
+    padding: 60px 120px;
+}
+
+.pc_nav ul {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.pc_nav ul li {
+    color: #111;
+    text-align: center;
+    font-size: 25px;
+    font-family: "Prompt", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.main_wrap {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin-top: 180px;
+}
+
+.main_first {
+    width: 50%;
+    margin-left: 180px;
+}
+
+.main_catch {
+    text-align: right;
+    margin-top: 80px;
+}
+
+.scrolldown {
+    text-align: center;
+    margin-top: 110px;
+}
