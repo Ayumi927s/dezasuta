@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+body {
+    background-color: #f2f7fa;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    margin-top: 185px;
+}
+
+.pc_nav ul {
+    display: flex;
+    align-items: center;
+}
+
+.contact h1 {
+    padding-bottom: 15px;
+}
+
+.emphasis {
+    margin: 90px 0 15px;
+    font-size: 32px;
+}
+
+.description {
+    padding: 10px;
+    font-size: 25px;
+}
+
+span {
+    color: red;
+}
+
+#msg {
+    margin-bottom: 180px;
+    padding-bottom: 50px;
+}
+button {
+    width: 320px;
+    height: 80px;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: #131313;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid #0010ec;
+    border-radius: 40px;
+}
+
+.pc_nav ul li {
+    color: #111;
+    text-align: center;
+}
+select {
+    position: relative;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size: 25px;
+    font-family: "Prompt", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.toc {
+    position: relative;
+    width: 50%;
+}
+.toc:after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 25px;
+    height: 25px;
+    border-top: 3px solid #0010ec;
+    border-left: 3px solid #0010ec;
+    pointer-events: none;
+    transform: translateY(-50%) rotate(-135deg);
+}
