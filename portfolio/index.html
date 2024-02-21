@@ -6,58 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="portfolio">
     <title>shibuya ayumiのportfolio</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
+    <nav class="header">
+        <div class="pc_nav">
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#skill">skill</a></li>
+                <li><a href="#gallery">gallery</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <header>
-        <nav class="header">
-            <div class="pc_nav">
-                <ul>
-                    <li><a href="#home">home</a></li>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#skill">skill</a></li>
-                    <li><a href="#gallery">gallery</a></li>
-                    <li><a href="#contact">contact</a></li>
-                </ul>
-            </div>
-        </nav>
-
         <section id="home">
             <div class="main_wrap">
                 <div class="main_first">
-                    <img src="1x/hello.png" alt="あいさつ">
+                    <img src="images/hello.png" alt="あいさつ">
                 </div>
                 <div class="main_catch">
                     <div class="main_title">
-                        <img src="1x/title.png" alt="title">
+                        <img src="images/title.png" alt="title">
                     </div>
                     <div class="main_name">
-                        <img src="1x/name.png" alt="name">
+                        <img src="images/name.png" alt="name">
                     </div>
                     <h3>大切に育ててきた思いを形にするお手伝いをしたい</h3>
                 </div>
             </div>
         </section>
-
-        <div class="scrolldown"><span>Scroll</span></div>
     </header>
+
+    <section id="scroll">
+        <div class="scrolldown"><span>Scroll</span></div>
+    </section>
 
     <section id="about">
         <div class="about_wrap">
-            <div class="about_title">
-                <h2><img src="1x/about.png" alt="about_logo"></h2>
-            </div>
-            <div class="about_img">
-                <img src="imges/about1.jpg" alt="about写真">
-            </div>
             <div class="about_base">
-                <img src="imges/about.svg" alt="aboutイメージ">
+                <div class="fluid">
+                    <div class="fluid_obj obj01"></div>
+                    <div class="fluid_obj obj02"></div>
+                </div>
+                <div class="about_img">
+                    <img src="images/about_pic.jpg" alt="about写真">
+                </div>
+                <div class="about_title">
+                    <h2><img src="images/about_logo.png" alt="about_logo"></h2>
+                </div>
+                <!-- <img src="images/about_img.svg" alt="aboutイメージ"> -->
             </div>
             <div class="about_wrapper">
-                <img src="1x/profile.jpg" alt="profile">
+                <h3 class="profile_img"><img src="images/profile.png" alt="profile"></h3>
                 <p>元ネイリストです。 <br>
                     退職後は営業事務や一般事務職の経験をし現在コーヒー屋の奥さんと２児の母をしています。<br>
                     細かい作業を黙々とすることが好きで趣味は手芸全般です。<br>
@@ -69,34 +75,45 @@
 
     <section id="skill">
         <div class="skill_wrap">
-            <h2><img src="1x/skill.png" alt="skill_logo"></h2>
-            <div class="skill_wrapeer">
+            <h2><img src="images/skill.png" alt="skill_logo" class="skill_logo"></h2>
+            <div class="skill_wrapper">
                 <div class="design">
-                    <h5>デザイン</h5>
-                    <h4>design</h4>
-                    <div class="ai">
-                        <img src="imges/Ai.svg" alt="Ai_img">
-                        <img src="1x/Ai.png" alt="Ai_logo">
+                    <div class="skill_group">
+                        <h5>デザイン</h5>
+                        <img src="images/design.png" alt="designのアイコン">
                     </div>
-                    <div class="ps">
-                        <img src="imges/PS.svg" alt="Ps_img">
-                        <img src="1x/Ps.png" alt="Ps_logo">
+                    <div class="skill_title animation">
+                        <div class="ai">
+                            <img src="images/Ai_img.svg" alt="ai_img">
+                            <img src="images/Ai_logo.png" alt="ai_logo" class="ai_menu">
+                        </div>
+                        <div class="ps">
+                            <img src="images/Ps_img.svg" alt="ps_img">
+                            <img src="images/Ps_logo.png" alt="ps_logo" class="ps_menu">
+                        </div>
                     </div>
-                    <p>デザインの基礎を学び様々なテーマに合わせてデザインカンプを作成することが出来ます。<br>
+                    <p class="skill_p">デザインの基礎を学び様々なテーマに合わせてデザインカンプを作成することが出来ます。<br>
                         またユーザ目線を忘れずに使いやすいデザインをご提案します。
                     </p>
                 </div>
+
                 <div class="coding">
-                    <h5>コーディング</h5>
-                    <h4>coding</h4>
-                    <div class="html_css">
-                        <img src="imges/html_css.svg" alt="html_css_img">
-                        <img src="1x/html_css.png" alt="html_css_logo">
+                    <div class="skill_group">
+                        <h5>コーディング</h5>
+                        <img src="images/coding.png" alt="codingのアイコン">
                     </div>
-                    <div class="js">
-                        <img src="imges/js.svg" alt="JS_logo">
-                        <img src="1x/js.png" alt="JS_img">
+                    <div class="skill_title animation">
+                        <div class="html_css">
+                            <img src="images/html_css_img.svg" alt="html_css_img">
+                            <img src="images/html_css_logo.png" alt="html_css_logo" class="html_css_menu">
+                        </div>
+                        <div class="js">
+                            <img src="images/js_img.svg" alt="jS_img">
+                            <img src="images/js_logo.png" alt="jS_logo" class="js_menu">
+                        </div>
                     </div>
+                    <p class="skill_p">HTML,CSSを使用しわかりやすい丁寧なコーディングを心がけています。
+                        またj Queryなどを使用し動きのあるサイトの実装も行います。</p>
                 </div>
             </div>
         </div>
@@ -104,42 +121,48 @@
 
     <section id="gallery">
         <div class="gallery_wrap">
-            <h2><img src="1x/gallery.png" alt="gallery_logo"></h2>
+            <div class="gallery_logo">
+                <h2><img src="images/gallery.png" alt="gallery_logo"></h2>
+            </div>
             <div class="gallery_wrapper">
-                <img src="imges/salon_HP.jpg" alt="hair_salon">
-                <img src="imges/design_cafe.jpg" alt="design_cafe">
-                <img src="imges/Kadai_shibuya-02.jpg" alt="trace">
-                <img src="imges/kadai_03_shibuya_pop04ol.jpg" alt="web_banner">
+                <img src="images/salon_HP.jpg" alt="hair_salon" class="gallery_img">
+                <img src="images/design_cafe.jpg" alt="design_cafe" class="gallery_img">
+                <img src="images/Kadai_shibuya-02.jpg" alt="trace" class="gallery_img">
+                <img src="images/kadai_03_shibuya_pop04ol.jpg" alt="web_banner" class="gallery_img">
             </div>
 
-            <button class="viewmore">view more</button>
+            <div class="button">
+                <a href="#"><img src="images/vier.more.png" alt="もっと見る"></a>
+            </div>
+
         </div>
     </section>
 
     <footer class="footer">
-        <div class="footer_wrap">
-            <nav class="footer_nav">
+        <nav class="footer_wrap">
+            <div class="footer_nav">
                 <ul>
                     <li><a href="#home">home</a></li>
                     <li><a href="#about">about</a></li>
-                    <li><a href="#skill">skill</a></li>
                     <li><a href="#gallery">gallery</a></li>
                     <li><a href="#contact">contact</a></li>
                 </ul>
-            </nav>
+            </div>
             <div class="footer_catch">
-                <h4>Thank you for your time</h4>
-                <img src="1x/footer.png" alt="footer_title">
+                <h2>Thank you for your time</h2>
+                <img src="images/footer.png" alt="footer_title">
             </div>
+
             <div class="copy">
-                <small>&copy; 2024 SHIBUYA AYUMI</small>
+                <small><img src="images/copyright.png" alt="コピーライト"></small>
             </div>
-        </div>
+        </nav>
     </footer>
 
     <div id="page_top"><a href="#">
-            <img src="1x/top.png" alt="上に戻る"></a>
+            <img src="images/top.png" alt="上に戻る" class="page_top"></a>
     </div>
+
 
 </body>
 
