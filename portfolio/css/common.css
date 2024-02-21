@@ -10,8 +10,6 @@ body,
 h1,
 h2,
 h3,
-h4,
-h5,
 p,
 dl,
 dt,
@@ -43,63 +41,4 @@ img {
     max-width: 100%;
     vertical-align: bottom;
     border: none;
-}
-
-body {
-    max-width: 1000px;
-    margin: 0 auto;
-    background-color: #f2f7fa;
-}
-
-/*ヘッダー*/
-.header {
-    padding: 60px 120px;
-}
-
-.pc_nav ul {
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    justify-content: space-between;
-}
-
-.pc_nav ul li {
-    color: #111;
-    text-align: center;
-    font-size: 25px;
-    font-family: "Prompt", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-}
-
-/*ボタン*/
-button {
-    padding: 0;
-    border: none;
-    background: transparent;
-}
-
-button img {
-    display: block;
-}
-
-.page_top {
-    position: fixed;
-    right: 90px;
-    bottom: 40px;
-}
-
-/*thanksPage*/
-.thanks_page {
-    margin-top: 100px;
-}
-
-.thanks_page h1 {
-    text-align: center;
-    padding: 50px;
-}
-
-.thanks_page p {
-    text-align: center;
-    font-size: 18px;
 }

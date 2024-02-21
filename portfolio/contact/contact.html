@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="portfolio">
+    <title>contact</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+
+<body>
+
+    <nav class="header">
+        <div class="pc_nav">
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#skill">skill</a></li>
+                <li><a href="#gallery">gallery</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <form
+        action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSc9DAJ33USpOyuQJ3zvPEdmzs7ylniNVVl72YNDAQlPOdg06Q/formResponse?pli=1"
+        method="post" target="hidden_iframe" onsubmit="submitted=true;">
+
+        <h1>お問い合わせ種別</h1>
+        <input type="hidden" name="entry.1982345762">
+        <select name="item">
+            <option value="item1">制作のご依頼</option>
+            <option value="item2">その他</option>
+        </select>
+        <label for="name">お名前</label>
+        <input id="name" type="text" name="entry.1222943963" placeholder="ヤマダ　タロウ">
+        <label for="company_name">会社名</label>
+        <input id="company_name" type="text" name="entry.709390648" placeholder="">
+        <label for="email">メールアドレス</label>
+        <input id="email" type="text" name="entry.504539634" placeholder="example@mail.co.jp">
+        <label for="telephone">メールアドレス</label>
+        <input id="telephone" type="text" name="entry.39685794" placeholder="">
+        <label for="msg">お問い合わせ内容</label>
+        <textarea id="msg" name="entry.111183363" placeholder="お問い合わせいただきありがとうございます。後ほどご連絡させて頂きます。"></textarea>
+        <button type="submit" name="button" value="送信">送信する</button>
+    </form>
+
+    <script type="text/javascript">
+        var submitted = false;
+    </script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+        onload="if(submitted)  {window.location='thanks.html';}"></iframe>
+</body>
+
+
+Ï
+
+</html>
