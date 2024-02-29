@@ -8,12 +8,13 @@
     <title>shibuya ayumiのportfolio</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 </head>
 
 <body>
-    <nav class="header">
-        <div class="pc_nav">
+    <div class="header">
+        <nav class="pc_nav">
             <ul>
                 <li><a href="#home">home</a></li>
                 <li><a href="#about">about</a></li>
@@ -21,31 +22,38 @@
                 <li><a href="#gallery">gallery</a></li>
                 <li><a href="#contact">contact</a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+        <div class="sp_btn"><span></span></div>
+        <nav class="sp_nav">
+            <ul>
+                <li><a href="#about">about</a></li>
+                <li><a href="#gallery">gallery</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+    </div>
 
-    <header>
-        <section id="home">
-            <div class="main_wrap">
-                <div class="main_first">
-                    <img src="images/hello.png" alt="あいさつ">
-                </div>
-                <div class="main_catch">
-                    <div class="main_title">
-                        <img src="images/title.png" alt="title">
-                    </div>
-                    <div class="main_name">
-                        <img src="images/name.png" alt="name">
-                    </div>
-                    <h3>大切に育ててきた思いを形にするお手伝いをしたい</h3>
-                </div>
+
+    <section id="home">
+        <div class="main_wrap">
+            <div class="main_first">
+                <img src="images/hello.png" alt="あいさつ">
             </div>
-        </section>
-    </header>
+            <div class="main_catch">
+                <h1>
+                    <img src="images/title.png" alt="PORTFOLIO">
+                    <img src="images/name.png" alt="SHIBUYA AYUMI">
 
-    <section id="scroll">
-        <div class="scrolldown"><span>Scroll</span></div>
+                </h1>
+                <p class="catch_copy">大切に育ててきた思いを形にする<br class="sp_only"> お手伝いをしたい</p>
+            </div>
+        </div>
+
+        <div class="scroll">
+            <div class="scrolldown"><span>Scroll</span></div>
+        </div>
     </section>
+
 
     <section id="about">
         <div class="about_wrap">
@@ -57,10 +65,13 @@
                 <div class="about_img">
                     <img src="images/about_pic.jpg" alt="about写真">
                 </div>
-                <div class="about_title">
-                    <h2><img src="images/about_logo.png" alt="about_logo"></h2>
+                <div class="sp_about">
+                    <img src="images/about_sp.jpg" alt="about写真_sp版">
                 </div>
-                <!-- <img src="images/about_img.svg" alt="aboutイメージ"> -->
+                <div class="about_title">
+                    <h2><img src="images/about_logo.png" alt="about"></h2>
+                </div>
+
             </div>
             <div class="about_wrapper">
                 <h3 class="profile_img"><img src="images/profile.png" alt="profile"></h3>
@@ -75,19 +86,19 @@
 
     <section id="skill">
         <div class="skill_wrap">
-            <h2><img src="images/skill.png" alt="skill_logo" class="skill_logo"></h2>
+            <h2><img src="images/skill.png" alt="skill_logo" class="skill"></h2>
             <div class="skill_wrapper">
-                <div class="design">
+                <div class="skill_col">
                     <div class="skill_group">
-                        <h5>デザイン</h5>
+                        <h3>デザイン</h3>
                         <img src="images/design.png" alt="designのアイコン">
                     </div>
-                    <div class="skill_title animation">
-                        <div class="ai">
+                    <div class="skill_title">
+                        <div class="ai animation">
                             <img src="images/Ai_img.svg" alt="ai_img">
                             <img src="images/Ai_logo.png" alt="ai_logo" class="ai_menu">
                         </div>
-                        <div class="ps">
+                        <div class="ps animation">
                             <img src="images/Ps_img.svg" alt="ps_img">
                             <img src="images/Ps_logo.png" alt="ps_logo" class="ps_menu">
                         </div>
@@ -97,17 +108,17 @@
                     </p>
                 </div>
 
-                <div class="coding">
+                <div class="skill_col">
                     <div class="skill_group">
-                        <h5>コーディング</h5>
+                        <h3>コーディング</h3>
                         <img src="images/coding.png" alt="codingのアイコン">
                     </div>
-                    <div class="skill_title animation">
-                        <div class="html_css">
+                    <div class="skill_title">
+                        <div class="html_css animation">
                             <img src="images/html_css_img.svg" alt="html_css_img">
                             <img src="images/html_css_logo.png" alt="html_css_logo" class="html_css_menu">
                         </div>
-                        <div class="js">
+                        <div class="js animation">
                             <img src="images/js_img.svg" alt="jS_img">
                             <img src="images/js_logo.png" alt="jS_logo" class="js_menu">
                         </div>
@@ -122,48 +133,74 @@
     <section id="gallery">
         <div class="gallery_wrap">
             <div class="gallery_logo">
-                <h2><img src="images/gallery.png" alt="gallery_logo"></h2>
+                <h2><img src="images/gallery.png" alt="gallery"></h2>
             </div>
             <div class="gallery_wrapper">
-                <img src="images/salon_HP.jpg" alt="hair_salon" class="gallery_img">
-                <img src="images/design_cafe.jpg" alt="design_cafe" class="gallery_img">
-                <img src="images/Kadai_shibuya-02.jpg" alt="trace" class="gallery_img">
-                <img src="images/kadai_03_shibuya_pop04ol.jpg" alt="web_banner" class="gallery_img">
+                <ul>
+                    <li><img src="images/salon_HP.jpg" alt="hair_salon" class="gallery_img">
+                        <div class="gallery_title">solonサイト</div>
+                    </li>
+                    <li>
+                        <img src="images/design_cafe.jpg" alt="design_cafe" class="gallery_img">
+                        <div class="gallery_title">cafeサイト</div>
+                    </li>
+                    <li>
+                        <img src="images/Kadai_shibuya-02.jpg" alt="trace" class="gallery_img">
+                        <div class="gallery_title">トレース</div>
+                    </li>
+                    <li>
+                        <img src="images/kadai_03_shibuya_pop04ol.jpg" alt="web_banner" class="gallery_img">
+                        <div class="gallery_title">web用バナー</div>
+                    </li>
+                </ul>
             </div>
 
-            <div class="button">
-                <a href="#"><img src="images/vier.more.png" alt="もっと見る"></a>
-            </div>
+
+            <a href="#" class="btn">viem more</a>
+
 
         </div>
     </section>
 
     <footer class="footer">
-        <nav class="footer_wrap">
-            <div class="footer_nav">
-                <ul>
-                    <li><a href="#home">home</a></li>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#gallery">gallery</a></li>
-                    <li><a href="#contact">contact</a></li>
-                </ul>
-            </div>
+        <div class="footer_wrap">
+            <nav>
+                <div class="footer_nav">
+                    <ul>
+                        <li><a href="#home">home</a></li>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#gallery">gallery</a></li>
+                        <li><a href="#contact">contact</a></li>
+                    </ul>
+                </div>
+            </nav>
             <div class="footer_catch">
-                <h2>Thank you for your time</h2>
-                <img src="images/footer.png" alt="footer_title">
+                <p>Thank you for your time</p>
+                <div class="footer_title">
+                    <img src="images/footer.png" alt="PORTFOLIO">
+                    <img src="images/footer_name.png" alt="SHIBUYA AYUMI">
+                </div>
             </div>
 
-            <div class="copy">
-                <small><img src="images/copyright.png" alt="コピーライト"></small>
+            <div class="footer_copy">
+                <small>&copy;2024 SHIBUYA AYUMI</small>
             </div>
-        </nav>
+        </div>
     </footer>
 
-    <div id="page_top"><a href="#">
-            <img src="images/top.png" alt="上に戻る" class="page_top"></a>
+    <div>
+        <a href="index.html"><img src="images/top.png" alt="topに戻る" class="page_top"></a>
+        <a href="contact/index.html"><img src="images/contact@2x.png" alt="お問合せ" class="sp_contact"></a>
     </div>
 
-
+    <script>
+        $(function () {
+            $('.sp_btn, .sp_nav li').on('click', function () {
+                $('.sp_nav').toggleClass();
+                $('.sp_btn').toggleClass('open');
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -1,13 +1,10 @@
 @charset "utf-8";
 
-body {
-    background-color: #f2f7fa;
-}
-
 .contact {
     display: flex;
     flex-direction: column;
-    margin-top: 185px;
+    margin: 185px auto;
+    max-width: 1000px;
 }
 
 .pc_nav ul {
@@ -37,6 +34,7 @@ span {
     margin-bottom: 180px;
     padding-bottom: 50px;
 }
+
 button {
     width: 320px;
     height: 80px;
@@ -48,6 +46,14 @@ button {
     font-weight: bold;
     border: 1px solid #0010ec;
     border-radius: 40px;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+/*送信でにホバーすると色が変わる*/
+button:hover {
+    color: #fff;
+    background: #0010ec;
 }
 
 .pc_nav ul li {
@@ -83,4 +89,25 @@ select {
     border-left: 3px solid #0010ec;
     pointer-events: none;
     transform: translateY(-50%) rotate(-135deg);
+}
+
+/*ここからSP版*/
+@media screen and (max-width: 767px) {
+    .header {
+        width: 100%;
+    }
+
+    .contact {
+        padding: 0 5%;
+        box-sizing: border-box;
+    }
+
+    .contact:after {
+        max-width: 100%;
+        margin: 0 auto;
+        right: 10px;
+        top: 25px;
+        width: 15px;
+        height: 15px;
+    }
 }

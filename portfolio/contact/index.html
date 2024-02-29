@@ -8,13 +8,14 @@
     <title>contact</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 </head>
 
 <body>
 
-    <nav class="header">
-        <div class="pc_nav">
+    <div class="header">
+        <nav class="pc_nav">
             <ul>
                 <li><a href="#home">home</a></li>
                 <li><a href="#about">about</a></li>
@@ -22,8 +23,16 @@
                 <li><a href="#gallery">gallery</a></li>
                 <li><a href="#contact">contact</a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+        <div class="sp_btn"><span></span></div>
+        <nav class="sp_nav">
+            <ul>
+                <li><a href="#about">about</a></li>
+                <li><a href="#gallery">gallery</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+    </div>
 
 
     <form
@@ -54,11 +63,45 @@
         </div>
     </form>
 
+    <footer class="footer">
+        <div class="footer_wrap">
+            <nav>
+                <div class="footer_nav">
+                    <ul>
+                        <li><a href="#home">home</a></li>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#gallery">gallery</a></li>
+                        <li><a href="#contact">contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="footer_catch">
+                <p>Thank you for your time</p>
+                <div class="footer_title">
+                    <img src="../images/footer.png" alt="PORTFOLIO">
+                    <img src="../images/footer_name.png" alt="SHIBUYA AYUMI">
+                </div>
+            </div>
+
+            <div class="footer_copy">
+                <small>&copy;2024 SHIBUYA AYUMI</small>
+            </div>
+        </div>
+    </footer>
+
     <script>
         var submitted = false;
+
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+            onload="if(submitted)  {window.location='../thanks.html';}"></iframe>
+
+        $(function () {
+            $('.sp_btn, .sp_nav li').on('click', function () {
+                $('.sp_nav').toggleClass();
+                $('.sp_btn').toggleClass('open');
+            });
+        });
     </script>
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
-        onload="if(submitted)  {window.location='../thanks.html';}"></iframe>
 </body>
 
 

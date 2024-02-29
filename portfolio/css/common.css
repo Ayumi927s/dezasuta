@@ -20,11 +20,19 @@ ul,
 li {
     margin: 0;
     padding: 0;
-    line-height: 1;
     /*デフォルトの文字色、font-familyを予め当てておく*/
     color: #000;
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
         "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    font-feature-settings: "palt";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f2f7fa;
 }
 
 a {
@@ -32,6 +40,11 @@ a {
     text-decoration: none;
     /*色を消す*/
     color: inherit;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.5;
 }
 
 ul {
@@ -45,31 +58,61 @@ img {
     border: none;
 }
 
-body {
-    max-width: 1000px;
-    margin: 0 auto;
-    background-color: #f2f7fa;
-}
-
 /*ヘッダー*/
 .header {
-    padding: 60px 120px;
+    padding: 60px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .pc_nav ul {
     display: flex;
     align-items: center;
     margin: 0 auto;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 60px;
 }
 
 .pc_nav ul li {
-    color: #111;
+    color: #131313;
     text-align: center;
     font-size: 25px;
     font-family: "Prompt", sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     font-style: normal;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.pc_nav ul li a {
+    padding: 0 20px;
+    border-radius: 40px;
+    line-height: 1;
+}
+
+.pc_nav ul li a::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #0010ec;
+    border-radius: 40px;
+    transition: transform ease 0.5s;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+}
+
+.pc_nav ul li a:hover {
+    color: #fff;
+}
+
+.pc_nav ul li a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
 }
 
 /*ボタン*/
@@ -86,7 +129,94 @@ button img {
 .page_top {
     position: fixed;
     right: 90px;
-    bottom: 40px;
+    bottom: 5px;
+}
+
+.sp_contact {
+    display: none;
+}
+
+/*フッター*/
+.footer_wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer_nav ul {
+    display: flex;
+    gap: 60px;
+    justify-content: flex-end;
+    padding-top: 74px;
+}
+
+.footer_nav ul li {
+    color: #131313;
+    text-align: center;
+    font-size: 24px;
+    font-family: "Prompt";
+    font-weight: 300;
+    font-style: normal;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.footer_nav ul li a {
+    padding: 0 20px;
+    border-radius: 40px;
+    line-height: 1;
+}
+
+.footer_nav ul li a::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #0010ec;
+    border-radius: 40px;
+    transition: transform ease 0.5s;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+}
+
+.footer_nav ul li a:hover {
+    color: #fff;
+}
+
+.footer_nav ul li a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+}
+
+.footer_title img {
+    display: block;
+    padding-top: 20px;
+}
+
+.footer_title :last-child {
+    padding-top: 0;
+}
+
+.footer_catch {
+    padding-top: 20px;
+    font-size: 32px;
+}
+
+.footer_copy {
+    display: flex;
+    justify-content: center;
+    margin: 120px 0;
+    font-size: 20px;
+    font-family: "Prompt";
+}
+
+.page_back {
+    position: fixed;
+    right: 90px;
+    bottom: 5px;
 }
 
 /*thanksPage*/
@@ -102,4 +232,147 @@ button img {
 .thanks_page p {
     text-align: center;
     font-size: 18px;
+}
+
+.sp_only {
+    display: none;
+}
+
+.sp_nav,
+.sp_btn {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .pc_nav {
+        display: none;
+    }
+
+    /*ハンバーガーメニュー*/
+
+    .sp_btn {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        display: block;
+        height: 23px;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .sp_btn span {
+        position: relative;
+        top: 10px;
+        display: block;
+        width: 50px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: #111;
+        transition: 0.3s;
+    }
+
+    .sp_btn span::before,
+    .sp_btn span::after {
+        position: absolute;
+        content: "";
+        display: block;
+        height: 3px;
+        border-radius: 2px;
+        background-color: #111;
+        transition: 0.3s;
+    }
+
+    .sp_btn span::before {
+        width: 33px;
+        bottom: 10px;
+    }
+
+    .sp_btn span::after {
+        width: 70px;
+        top: 10px;
+    }
+
+    /*ハンバーガーを閉じる*/
+
+    .sp_btn.open span {
+        background: transparent;
+    }
+
+    .sp_btn.open span::before {
+        bottom: 0px;
+        transform: rotate(45deg);
+        background-color: #0010ec;
+    }
+
+    .sp_btn.open span::after {
+        width: 33px;
+        top: 0px;
+        transform: rotate(135deg);
+        background-color: #0010ec;
+    }
+
+    /* ハンバーガーメニュー */
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+    }
+
+    .sp_nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .sp_nav ul li {
+        padding: 20px;
+        color: #fff;
+        font-size: 18px;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",
+            "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    }
+
+    /*フッターメニュー*/
+
+    .footer_nav {
+        display: none;
+    }
+
+    .footer_title img {
+        margin: 0 auto;
+    }
+
+    .footer_copy {
+        margin-top: 80px;
+    }
+
+    .footer_catch {
+        padding-top: 160px;
+    }
+
+    .footer_catch p {
+        text-align: center;
+    }
+
+    .page_top {
+        display: none;
+    }
+
+    .page_back {
+        display: none;
+    }
+
+    .sp_contact {
+        display: block;
+        position: fixed;
+        width: 26%;
+        right: 20px;
+        bottom: 375px;
+        z-index: 100;
+    }
 }

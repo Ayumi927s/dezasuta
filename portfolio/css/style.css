@@ -18,7 +18,35 @@
     margin-top: 80px;
 }
 
+.catch_copy {
+    font-size: 24px;
+}
+
 /*ここからスクロール*/
+.scroll {
+    width: 100%;
+    height: 30vh;
+    position: relative;
+}
+
+.scroll:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+}
+/*
+@media screen and (max-width: 768px) {
+    .scroll,
+    .scroll:before {
+        height: 90vh;
+    }
+}
+*/
+
 .scrolldown {
     position: absolute;
     bottom: 0px;
@@ -101,6 +129,8 @@
     height: 50px;
     background: #131313;
 }
+
+/*aboutイメージ*/
 
 .fluid {
     position: relative;
@@ -230,32 +260,10 @@
     }
 }
 
-#scroll {
-    width: 100%;
-    height: 30vh;
-    position: relative;
-}
-
-#scroll:before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100vh;
-}
-
-@media screen and (max-width: 768px) {
-    #scroll,
-    #scroll:before {
-        height: 90vh;
-    }
-}
-
 /*ここからabout*/
 #about {
     margin-top: 85px;
+    overflow: hidden;
 }
 
 .about_wrap {
@@ -267,10 +275,9 @@
 
 .about_base {
     display: flex;
-    justify-content: center;
     align-items: center;
     width: 100%;
-    margin-left: -15px;
+    margin-left: 25px;
 }
 
 .fluid {
@@ -283,7 +290,6 @@
 
 .about_img {
     position: relative;
-    right: 15%;
     width: 60%;
     border-radius: 20px;
     overflow: hidden;
@@ -312,11 +318,15 @@
     color: #fff;
     font-size: 16px;
     line-height: 1.85;
-    font-feature-settings: "palt";
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
 }
 
 .profile_img {
     text-align: center;
+}
+
+.sp_about img {
+    display: none;
 }
 
 /*ここからskill*/
@@ -326,16 +336,17 @@
     padding-bottom: 150px;
 }
 
-.skill_logo {
-    margin-right: -20px;
-}
-
 .skill_wrap h2 {
     display: flex;
     flex-direction: row-reverse;
     margin-right: -10px;
 }
 
+@media screen and (max-width: 1100px) {
+    .skill_wrap h2 {
+        margin-right: 0px;
+    }
+}
 .skill_wrapper {
     display: flex;
     justify-content: space-between;
@@ -343,14 +354,9 @@
     max-width: 1000px;
 }
 
-.design {
+.skill_col {
     width: 45%;
     margin: 0 20px 0 30px;
-}
-
-.coding {
-    width: 45%;
-    margin-left: 20px;
 }
 
 .skill_group {
@@ -412,7 +418,6 @@
 .skill_p {
     font-size: 18px;
     line-height: 1.8;
-    font-feature-settings: "palt";
 }
 
 /*アニメーション*/
@@ -433,40 +438,48 @@
     }
 }
 
+.animation {
+    animation: fuwafuwa 3s linear infinite;
+    scale: 1;
+}
+
+@keyframes fuwafuwa {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 /*ここからgallery*/
 #gallery {
     background-color: #fff;
-    width: auto;
+    border-bottom: 1px solid #131313;
 }
 
 .gallery_wrap {
+    position: relative;
     max-width: 1000px;
-    margin: 0 auto;
-    padding-bottom: 80px;
+    margin: 50px auto;
+    padding: 80px 0;
 }
 
 .gallery_logo {
     position: absolute;
-}
-
-.gallery_wrap img {
-    margin-top: -40px;
-    margin-left: -20px;
+    top: -50px;
+    left: -25px;
 }
 
 .gallery_wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    position: relative;
-    top: 50px;
-    margin: 0 20px;
     padding-bottom: 80px;
 }
 
 .gallery_wrapper img {
     margin: 0 20px 40px;
-    width: 45%;
     border: 1px solid;
     border-radius: 20px;
 }
@@ -477,52 +490,150 @@
     object-fit: cover;
 }
 
-.button img {
-    position: absolute;
-    left: 42%;
-    padding: 10px 20px;
-    border: 1px solid #0010ec;
-    border-radius: 40px;
-}
-
-/*フッター*/
-.footer {
-    border-top: 1px solid #131313;
-}
-
-.footer_wrap {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.footer_nav ul {
+.gallery_wrapper ul {
+    position: relative;
     display: flex;
-    align-items: center;
-    margin: 0 auto;
-    justify-content: space-between;
-    padding: 74px 0px 0 50%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
 }
 
-.footer_nav ul li {
-    color: #131313;
-    text-align: center;
-    font-size: 24px;
-    font-family: "Prompt", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-}
-.footer_catch h2 {
-    padding-top: 20px;
+.gallery_wrapper li {
+    position: relative;
+    width: 45%;
 }
 
-.footer_catch img {
-    padding-top: 20px;
-}
-
-.copy {
+.gallery_title {
+    position: absolute;
+    top: 10px;
+    left: 35px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 82%;
+    box-sizing: border-box;
+    border-radius: 20px;
+    opacity: 0;
+    background: rgba(16, 16, 16, 0.8);
+    color: #fff;
+    transition: 0.5s;
+}
+
+li:hover .gallery_title {
+    opacity: 1;
+}
+
+.btn {
+    display: block;
+    width: 334px;
     margin: 0 auto;
-    margin-top: 72px;
-    padding-bottom: 77px;
+    padding: 20px 0;
+    border: 1px solid #0010ec;
+    border-radius: 40px;
+    line-height: 1;
+    font-family: "prompt";
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    color: #0010ec;
+}
+
+/*ここからSP版*/
+@media screen and (max-width: 767px) {
+    .main_wrap {
+        display: block;
+    }
+
+    .main_first {
+        margin: 0 auto;
+    }
+
+    .main_catch {
+        text-align: center;
+    }
+
+    #about {
+        margin-top: 45px;
+    }
+
+    .about_wrap {
+        margin: 40px 0 250px;
+    }
+
+    .about_img img {
+        display: none;
+    }
+
+    .sp_about img {
+        display: block;
+        width: 80%;
+        position: absolute;
+        right: 5%;
+        bottom: -195px;
+        border-radius: 20px;
+    }
+
+    .about_wrapper {
+        width: 65%;
+        top: 18%;
+        left: 22%;
+        z-index: 50;
+    }
+
+    .about_wrapper p {
+        font-size: 18px;
+        box-sizing: border-box;
+    }
+
+    .about_title {
+        left: 15px;
+        z-index: 20;
+    }
+
+    .fluid {
+        left: 50%;
+        z-index: 1;
+    }
+
+    .skill_wrapper {
+        display: block;
+    }
+
+    .skill_col {
+        margin: 0 auto;
+        width: 80%;
+        padding-top: 105px;
+    }
+
+    .skill_p {
+        margin: 0 12%;
+        padding-top: 80px;
+        font-size: 24px;
+    }
+
+    .gallery_wrap {
+        display: block;
+    }
+
+    .gallery_wrapper ul {
+        display: block;
+    }
+
+    .gallery_wrapper ul li {
+        width: 80%;
+        margin: 0 auto;
+        padding-bottom: 10px;
+    }
+
+    .gallery_logo {
+        left: 20px;
+    }
+
+    .footer_catch {
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 160px;
+    }
 }

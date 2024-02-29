@@ -5,17 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="portfolio">
-    <title>work1</title>
+    <title>work3</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
 </head>
 
 <body>
     <header class="work_warp">
-        <div class="header">
-            <nav class="pc_nav">
+        <nav class="header">
+            <div class="pc_nav">
                 <ul>
                     <li><a href="#home">home</a></li>
                     <li><a href="#about">about</a></li>
@@ -23,33 +21,19 @@
                     <li><a href="#gallery">gallery</a></li>
                     <li><a href="#contact">contact</a></li>
                 </ul>
-            </nav>
-            <div class="sp_btn"><span></span></div>
-            <nav class="sp_nav">
-                <ul>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#gallery">gallery</a></li>
-                    <li><a href="#contact">contact</a></li>
-                </ul>
-            </nav>
-        </div>
-
+            </div>
+        </nav>
     </header>
 
     <main class="main_wrap">
-        <div class="fv fv_banner">
-            <div class="luxury">
-                <img src="images/kadai_03_shibuya_luxury04ol.jpg" alt="web用バナー高級">
-            </div>
-            <div class="pop">
-                <img src="images/kadai_03_shibuya_pop04ol.jpg" alt="web用バナー高級">
-            </div>
+        <div class="fv">
+            <img src="images/design_cafe.jpg" alt="cafeサイト">
         </div>
 
         <div class="work_concept">
             <div class="work_title">
-                <img src="images/title.png" alt="title" width="8px" height="42px">
-                <h1 class="title">新商品のweb広告用バナー</h1>
+                <img src="images/title.png" alt="title">
+                <h1 class="title">cafeサイト</h1>
             </div>
 
             <table class="content">
@@ -63,29 +47,38 @@
                 </tr>
                 <tr class="period">
                     <td>制作期間:</td>
-                    <td>14日間</td>
+                    <td>30日間</td>
                 </tr>
                 <tr class="soft">
                     <td>使用ソフト:</td>
-                    <td>illustrator,Photoshop</td>
+                    <td>Visual Studio Code</td>
                 </tr>
             </table>
 
             <div class="work_description">
                 <div class="work_desc">
-                    <img src="images/sub.png" alt="mark" width="80%" height="80%">
+                    <img src="images/sub.png" alt="mark">
                 </div>
                 <h2 class="work_info">概要</h2>
-                <p class="work_detail">新商品の告知のためのバナー。ABテストをするため「高級ver」と「POPver」を作成。</p>
+                <p class="work_detail">デザインカンプからの実装</p>
             </div>
             <div class="work_summary">
                 <div class="work_desc">
-                    <img src="images/sub.png" alt="mark" width="80%" height="80%">
+                    <img src="images/sub.png" alt="mark">
                 </div>
                 <h2 class="work_info">デザインについて</h2>
-                <p class="work_detail">目的が興味を持ってもらいサイトへの誘導と来店促進のため、商品名と発売日を大きく目立たせて周知してもらえるように配置しました。<br>
-                    高級verは色味を抑えてハンバーガーの存在を引き立たせ、POPverは赤系を使用して食欲をそそり誰でも手に取りやすい印象を与えれるように意識して作成しました。
+                <p class="work_detail">HPサイト及びレスポンシブの実装。javaScriptやjQueryを用いてサイトに動きをつけています。
+                    少しづつコツコツとサイトを作り上げていく楽しさはありましたが、一度つまづくと問題点を見つけ出すまで大変苦労しました。
+                    丁寧に記述していくことの大切を学ぶことができました。
                 </p>
+            </div>
+            <div class="work_banner">
+                <div class="work_desc">
+                    <img src="images/sub.png" alt="mark">
+                </div>
+                <h2 class="work_info">URL</h2>
+                <a href="#"><img src="images/adobe-express-qr-code .png" alt="QRコード"></a>
+                <p>https://ayumi927s.github.io/portfolio/</p>
             </div>
         </div>
     </main>
@@ -95,7 +88,7 @@
                 <img src="images/prev.png" alt="前へ">
             </a></div>
         <div class="page">
-            <img src="images/1_4.png" alt="1ページ目">
+            <img src="images/3_4.png" alt="3ページ目">
         </div>
         <div class="next"><a href="#">
                 <img src="images/next.png" alt="前へ">
@@ -131,14 +124,6 @@
     <div id="page_back"><a href="#">
             <img src="images/back.png" alt="前に戻る" class="page_back"></a>
     </div>
-    <script>
-        $(function () {
-            $('.sp_btn, .sp_nav li').on('click', function () {
-                $('.sp_nav').toggleClass();
-                $('.sp_btn').toggleClass('open');
-            });
-        });
-    </script>
 </body>
 
 </html>
