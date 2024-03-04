@@ -9,6 +9,13 @@ body {
     margin: 0 auto;
 }
 
+.gallery_top {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 110px;
+}
+
 .fv img {
     width: 1000px;
     height: 534px;
@@ -23,8 +30,9 @@ body {
     display: flex;
 }
 
-.work_title img {
-    padding-right: 20px;
+.title {
+    padding-left: 30px;
+    border-left: 8px solid #0010ce;
 }
 
 .content {
@@ -54,6 +62,7 @@ body {
     margin: 38px 0 160px;
 }
 
+/*ページ*/
 .work_cat {
     display: flex;
     align-items: center;
@@ -63,6 +72,39 @@ body {
     margin-bottom: 220px;
 }
 
+.work_page {
+    font-size: 24px;
+    font-family: "Prompt";
+    font-weight: 600;
+    font-style: normal;
+}
+
+/*モーダル*/
+#lightbox .lb-container {
+    padding: 1px;
+}
+#lightbox .lb-container {
+    padding: 0px;
+}
+#lightbox .lb-outerContainer {
+    padding: 6px;
+}
+
+.lb-container {
+    width: 100%;
+    height: auto;
+}
+.lb-image {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 1000px) {
+    .main_wrap {
+        padding: 0 5%;
+        box-sizing: border-box;
+    }
+}
 @media screen and (max-width: 767px) {
     .fv_banner {
         display: block;
@@ -71,5 +113,16 @@ body {
 
     .fv_banner img {
         height: auto;
+    }
+
+    .title {
+        margin: 0 auto;
+        padding-left: 0px;
+        font-size: 28px;
+        border: none;
+    }
+
+    .content {
+        font-size: 24px;
     }
 }

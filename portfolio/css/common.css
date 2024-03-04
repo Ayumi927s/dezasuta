@@ -58,11 +58,100 @@ img {
     border: none;
 }
 
+/*ローデイング画面*/
+#splash {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/loding.png);
+    background-size: cover;
+    z-index: 9999999;
+    text-align: center;
+}
+
+#splash-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 45px;
+    font-family: "Prompt", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/*========= 画面遷移のためのCSS ===============*/
+
+/*画面遷移アニメーション*/
+
+body.appear {
+    background: #f2f7fa; /*画面を開いた後の背景色を指定*/
+}
+
+.splashbg {
+    display: none;
+    content: "";
+    position: fixed;
+    transform: scale(100);
+    background-image: url(/images/loding.png); /*伸びる背景色の設定*/
+    z-index: 999;
+    /*丸のスタートの形状*/
+    top: calc(50% - 1rem); /*50%から円の半径を引いた値*/
+    left: calc(50% - 1rem); /*50%から円の半径を引いた値*/
+    width: 2rem;
+    height: 2rem;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg {
+    display: block;
+    border-radius: 50%;
+    animation-name: PageAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes PageAnime {
+    0% {
+        /*丸のスタート位置と形状*/
+        transform: scale(100);
+    }
+    100% {
+        /*丸の終了位置と形状*/
+        transform: scale(0);
+        display: none; /*終了時は消える*/
+    }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container {
+    opacity: 0; /*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container {
+    animation-name: PageAnimeAppear;
+    animation-duration: 1s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes PageAnimeAppear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 /*ヘッダー*/
 .header {
     padding: 60px 40px;
     max-width: 1000px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .pc_nav ul {
@@ -129,7 +218,12 @@ button img {
 .page_top {
     position: fixed;
     right: 90px;
-    bottom: 5px;
+    bottom: 40px;
+}
+
+.page_top:hover img {
+    transition: transform 1s;
+    transform: rotate(-360deg);
 }
 
 .sp_contact {
@@ -137,7 +231,7 @@ button img {
 }
 
 /*フッター*/
-.footer_wrap {
+.footer {
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -161,13 +255,13 @@ button img {
     z-index: 1;
 }
 
-.footer_nav ul li a {
+.footer_nav li a {
     padding: 0 20px;
     border-radius: 40px;
     line-height: 1;
 }
 
-.footer_nav ul li a::before {
+.footer_nav li a::before {
     content: "";
     width: 100%;
     height: 100%;
@@ -216,7 +310,11 @@ button img {
 .page_back {
     position: fixed;
     right: 90px;
-    bottom: 5px;
+    bottom: 25px;
+}
+.page_back:hover img {
+    transition: transform 1s;
+    transform: rotate(-360deg);
 }
 
 /*thanksPage*/
@@ -251,13 +349,13 @@ button img {
     /*ハンバーガーメニュー*/
 
     .sp_btn {
-        position: absolute;
+        position: fixed;
         top: 20px;
         right: 25px;
         display: block;
         height: 23px;
         cursor: pointer;
-        z-index: 2;
+        z-index: 200;
     }
 
     .sp_btn span {
@@ -313,13 +411,16 @@ button img {
 
     /* ハンバーガーメニュー */
     .sp_nav {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100vh;
-        background: rgba(0, 0, 0, 0.8);
-        z-index: 1;
+        background-image: url(/images/menu@2x.png);
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        z-index: 100;
     }
 
     .sp_nav ul {
@@ -331,10 +432,33 @@ button img {
     }
     .sp_nav ul li {
         padding: 20px;
-        color: #fff;
-        font-size: 18px;
-        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",
-            "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+        color: #131313;
+        font-size: 80px;
+        font-family: "Prompt", sans-serif;
+        font-weight: 600;
+    }
+    /*ハンバーガーリンクのアニメーション*/
+    a {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        text-decoration: none;
+    }
+
+    a:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+        transform: translate(-100%, 0);
+        transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
+        content: "";
+    }
+
+    a:hover:after {
+        transform: translate(0, 0);
     }
 
     /*フッターメニュー*/
@@ -372,7 +496,7 @@ button img {
         position: fixed;
         width: 26%;
         right: 20px;
-        bottom: 375px;
+        bottom: 35px;
         z-index: 100;
     }
 }

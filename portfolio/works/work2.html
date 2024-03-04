@@ -8,31 +8,48 @@
     <title>work2</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
 </head>
 
 <body>
     <header class="work_warp">
-        <nav class="header">
-            <div class="pc_nav">
+        <div class="header">
+            <nav class="pc_nav">
                 <ul>
-                    <li><a href="#home">home</a></li>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#skill">skill</a></li>
-                    <li><a href="#gallery">gallery</a></li>
-                    <li><a href="#contact">contact</a></li>
+                    <li><a href="../index.html#home">home</a></li>
+                    <li><a href="../index.html#about">about</a></li>
+                    <li><a href="../index.html#skill">skill</a></li>
+                    <li><a href="../index.html#gallery">gallery</a></li>
+                    <li><a href="/contact/index.html">contact</a></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+            <div class="sp_btn"><span></span></div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="../index.html#about">about</a></li>
+                    <li><a href="../index.html#gallery">gallery</a></li>
+                    <li><a href="/contact/index.html">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
     </header>
 
+
     <main class="main_wrap">
+        <div class="gallery_top">
+            <img src="images/gallery.png" alt="galleryタイトル">
+        </div>
         <div class="fv">
-            <img src="images/salon_HP_work.jpg" alt="ヘアーサロンデザインカンプ">
+            <a href="images/HairSalon_all.jpg" data-lightbox="lightbox" data-title="サイト全体">
+                <img src="images/salon_HP_work.jpg" alt="ヘアーサロンデザインカンプ">
+            </a>
         </div>
 
         <div class="work_concept">
             <div class="work_title">
-                <img src="images/title.png" alt="title">
                 <h1 class="title">Hair Salonサイト</h1>
             </div>
 
@@ -80,14 +97,12 @@
     </main>
 
     <div class="work_cat">
-        <div class="prev"><a href="#">
+        <div class="prev"><a href="work1.html">
                 <img src="images/prev.png" alt="前へ">
             </a></div>
-        <div class="page">
-            <img src="images/2_4.png" alt="2ページ目">
-        </div>
-        <div class="next"><a href="#">
-                <img src="images/next.png" alt="前へ">
+        <p class="work_page">2/4</p>
+        <div class="next"><a href="work3.html">
+                <img src="images/next.png" alt="次へ">
             </a></div>
     </div>
 
@@ -96,10 +111,10 @@
             <nav>
                 <div class="footer_nav">
                     <ul>
-                        <li><a href="#home">home</a></li>
-                        <li><a href="#about">about</a></li>
-                        <li><a href="#gallery">gallery</a></li>
-                        <li><a href="#contact">contact</a></li>
+                        <li><a href="../index.html#home">home</a></li>
+                        <li><a href="../index.html#about">about</a></li>
+                        <li><a href="../index.html#gallery">gallery</a></li>
+                        <li><a href="/contact/index.html">contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -117,9 +132,9 @@
         </div>
     </footer>
 
-    <div id="page_back"><a href="#">
-            <img src="images/back.png" alt="前に戻る" class="page_back"></a>
-    </div>
+    <a href="../index.html" class="page_back"><img src="images/back.png" alt="前に戻る"></a>
+
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

@@ -8,22 +8,35 @@
     <title>work4</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"
+        type="text/javascript"></script>
 </head>
 
 <body>
     <header class="work_warp">
-        <nav class="header">
-            <div class="pc_nav">
+        <div class="header">
+            <nav class="pc_nav">
                 <ul>
-                    <li><a href="#home">home</a></li>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#skill">skill</a></li>
-                    <li><a href="#gallery">gallery</a></li>
-                    <li><a href="#contact">contact</a></li>
+                    <li><a href="../index.html#home">home</a></li>
+                    <li><a href="../index.html#about">about</a></li>
+                    <li><a href="../index.html#skill">skill</a></li>
+                    <li><a href="../index.html#gallery">gallery</a></li>
+                    <li><a href="/contact/index.html">contact</a></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+            <div class="sp_btn"><span></span></div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="../index.html#about">about</a></li>
+                    <li><a href="../index.html#gallery">gallery</a></li>
+                    <li><a href="/contact/index.html">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
     </header>
+
 
     <main class="main_wrap">
         <div class="fv">
@@ -75,14 +88,12 @@
     </main>
 
     <div class="work_cat">
-        <div class="prev"><a href="#">
+        <div class="prev"><a href="work3.html">
                 <img src="images/prev.png" alt="前へ">
             </a></div>
-        <div class="page">
-            <img src="images/4_4.png" alt="4ページ目">
-        </div>
-        <div class="next"><a href="#">
-                <img src="images/next.png" alt="前へ">
+        <p class="work_page">4/4</p>
+        <div class="next"><a href="work1.html">
+                <img src="images/next.png" alt="次へ">
             </a></div>
     </div>
 
@@ -91,10 +102,10 @@
             <nav>
                 <div class="footer_nav">
                     <ul>
-                        <li><a href="#home">home</a></li>
-                        <li><a href="#about">about</a></li>
-                        <li><a href="#gallery">gallery</a></li>
-                        <li><a href="#contact">contact</a></li>
+                        <li><a href="../index.html#home">home</a></li>
+                        <li><a href="../index.html#about">about</a></li>
+                        <li><a href="../index.html#gallery">gallery</a></li>
+                        <li><a href="/contact/index.html">contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -112,9 +123,8 @@
         </div>
     </footer>
 
-    <div id="page_back"><a href="#">
-            <img src="images/back.png" alt="前に戻る" class="page_back"></a>
-    </div>
+    <a href="../index.html" class="page_back"><img src="images/back.png" alt="前に戻る"></a>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

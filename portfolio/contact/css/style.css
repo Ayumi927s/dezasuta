@@ -22,8 +22,10 @@
 }
 
 .description {
-    padding: 10px;
-    font-size: 25px;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
 }
 
 span {
@@ -33,6 +35,7 @@ span {
 #msg {
     margin-bottom: 180px;
     padding-bottom: 50px;
+    min-height: 200px;
 }
 
 button {
@@ -60,6 +63,7 @@ button:hover {
     color: #111;
     text-align: center;
 }
+
 select {
     position: relative;
     width: 100%;
@@ -71,9 +75,10 @@ select {
     font-weight: 200;
     font-style: normal;
     padding: 10px;
-    font-size: 25px;
+    border: none;
+    border-radius: 15px;
 }
-
+/*選択矢印*/
 .toc {
     position: relative;
     width: 50%;
@@ -81,22 +86,19 @@ select {
 .toc:after {
     content: "";
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 10%;
+    top: 33%;
     width: 25px;
     height: 25px;
-    border-top: 3px solid #0010ec;
-    border-left: 3px solid #0010ec;
+    border-top: 4px solid #0010ec;
+    border-left: 4px solid #0010ec;
+    border-radius: 1px;
     pointer-events: none;
     transform: translateY(-50%) rotate(-135deg);
 }
 
 /*ここからSP版*/
 @media screen and (max-width: 767px) {
-    .header {
-        width: 100%;
-    }
-
     .contact {
         padding: 0 5%;
         box-sizing: border-box;
@@ -109,5 +111,15 @@ select {
         top: 25px;
         width: 15px;
         height: 15px;
+    }
+
+    .toc {
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .toc {
+        max-width: 500px;
     }
 }

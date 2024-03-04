@@ -17,19 +17,19 @@
         <div class="header">
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="#home">home</a></li>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#skill">skill</a></li>
-                    <li><a href="#gallery">gallery</a></li>
-                    <li><a href="#contact">contact</a></li>
+                    <li><a href="../index.html#home">home</a></li>
+                    <li><a href="../index.html#about">about</a></li>
+                    <li><a href="../index.html#skill">skill</a></li>
+                    <li><a href="../index.html#gallery">gallery</a></li>
+                    <li><a href="/contact/index.html">contact</a></li>
                 </ul>
             </nav>
             <div class="sp_btn"><span></span></div>
             <nav class="sp_nav">
                 <ul>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#gallery">gallery</a></li>
-                    <li><a href="#contact">contact</a></li>
+                    <li><a href="../index.html#about">about</a></li>
+                    <li><a href="../index.html#gallery">gallery</a></li>
+                    <li><a href="/contact/index.html">contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -37,6 +37,9 @@
     </header>
 
     <main class="main_wrap">
+        <div class="gallery_top">
+            <img src="images/gallery.png" alt="galleryタイトル">
+        </div>
         <div class="fv fv_banner">
             <div class="luxury">
                 <img src="images/kadai_03_shibuya_luxury04ol.jpg" alt="web用バナー高級">
@@ -48,7 +51,6 @@
 
         <div class="work_concept">
             <div class="work_title">
-                <img src="images/title.png" alt="title" width="8px" height="42px">
                 <h1 class="title">新商品のweb広告用バナー</h1>
             </div>
 
@@ -73,14 +75,14 @@
 
             <div class="work_description">
                 <div class="work_desc">
-                    <img src="images/sub.png" alt="mark" width="80%" height="80%">
+                    <img src="images/sub.png" alt="mark" width="80" height="80">
                 </div>
                 <h2 class="work_info">概要</h2>
                 <p class="work_detail">新商品の告知のためのバナー。ABテストをするため「高級ver」と「POPver」を作成。</p>
             </div>
             <div class="work_summary">
                 <div class="work_desc">
-                    <img src="images/sub.png" alt="mark" width="80%" height="80%">
+                    <img src="images/sub.png" alt="mark" width="80" height="80">
                 </div>
                 <h2 class="work_info">デザインについて</h2>
                 <p class="work_detail">目的が興味を持ってもらいサイトへの誘導と来店促進のため、商品名と発売日を大きく目立たせて周知してもらえるように配置しました。<br>
@@ -91,54 +93,42 @@
     </main>
 
     <div class="work_cat">
-        <div class="prev"><a href="#">
+        <div class="prev"><a href="../index.html#gallery">
                 <img src="images/prev.png" alt="前へ">
             </a></div>
-        <div class="page">
-            <img src="images/1_4.png" alt="1ページ目">
-        </div>
-        <div class="next"><a href="#">
-                <img src="images/next.png" alt="前へ">
+        <p class="work_page">1/4</p>
+        <div class="next"><a href="work2.html">
+                <img src="images/next.png" alt="次へ">
             </a></div>
     </div>
 
     <footer class="footer">
-        <div class="footer_wrap">
-            <nav>
-                <div class="footer_nav">
-                    <ul>
-                        <li><a href="#home">home</a></li>
-                        <li><a href="#about">about</a></li>
-                        <li><a href="#gallery">gallery</a></li>
-                        <li><a href="#contact">contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="footer_catch">
-                <p>Thank you for your time</p>
-                <div class="footer_title">
-                    <img src="../images/footer.png" alt="PORTFOLIO">
-                    <img src="../images/footer_name.png" alt="SHIBUYA AYUMI">
-                </div>
+        <nav class="footer_nav">
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#gallery">gallery</a></li>
+                <li><a href="contact/index.html">contact</a></li>
+            </ul>
+        </nav>
+        <div class="footer_catch">
+            <p>Thank you for your time</p>
+            <div class="footer_title">
+                <img src="../images/footer.png" alt="PORTFOLIO">
+                <img src="../images/footer_name.png" alt="SHIBUYA AYUMI">
             </div>
+        </div>
 
-            <div class="footer_copy">
-                <small>&copy;2024 SHIBUYA AYUMI</small>
-            </div>
+        <div class="footer_copy">
+            <small>&copy;2024 SHIBUYA AYUMI</small>
         </div>
     </footer>
 
-    <div id="page_back"><a href="#">
-            <img src="images/back.png" alt="前に戻る" class="page_back"></a>
-    </div>
-    <script>
-        $(function () {
-            $('.sp_btn, .sp_nav li').on('click', function () {
-                $('.sp_nav').toggleClass();
-                $('.sp_btn').toggleClass('open');
-            });
-        });
-    </script>
+
+    <a href="../index.html" class="page_back"><img src="images/back.png" alt="前に戻る"></a>
+
+
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

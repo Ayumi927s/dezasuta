@@ -13,166 +13,199 @@
 </head>
 
 <body>
-    <div class="header">
-        <nav class="pc_nav">
-            <ul>
-                <li><a href="#home">home</a></li>
-                <li><a href="#about">about</a></li>
-                <li><a href="#skill">skill</a></li>
-                <li><a href="#gallery">gallery</a></li>
-                <li><a href="#contact">contact</a></li>
-            </ul>
-        </nav>
-        <div class="sp_btn"><span></span></div>
-        <nav class="sp_nav">
-            <ul>
-                <li><a href="#about">about</a></li>
-                <li><a href="#gallery">gallery</a></li>
-                <li><a href="#contact">contact</a></li>
-            </ul>
-        </nav>
-    </div>
+    <!-- ローディング用HTML -->
+    <div id="splash">
+        <div id="splash-logo">Loding</div>
+    </div><!--/splash-->
+    <div class="splashbg"></div><!---画面遷移用-->
+    <!-- ローディング用HTML ここまで -->
 
-
-    <section id="home">
-        <div class="main_wrap">
-            <div class="main_first">
-                <img src="images/hello.png" alt="あいさつ">
-            </div>
-            <div class="main_catch">
-                <h1>
-                    <img src="images/title.png" alt="PORTFOLIO">
-                    <img src="images/name.png" alt="SHIBUYA AYUMI">
-
-                </h1>
-                <p class="catch_copy">大切に育ててきた思いを形にする<br class="sp_only"> お手伝いをしたい</p>
-            </div>
-        </div>
-
-        <div class="scroll">
-            <div class="scrolldown"><span>Scroll</span></div>
-        </div>
-    </section>
-
-
-    <section id="about">
-        <div class="about_wrap">
-            <div class="about_base">
-                <div class="fluid">
-                    <div class="fluid_obj obj01"></div>
-                    <div class="fluid_obj obj02"></div>
-                </div>
-                <div class="about_img">
-                    <img src="images/about_pic.jpg" alt="about写真">
-                </div>
-                <div class="sp_about">
-                    <img src="images/about_sp.jpg" alt="about写真_sp版">
-                </div>
-                <div class="about_title">
-                    <h2><img src="images/about_logo.png" alt="about"></h2>
-                </div>
-
-            </div>
-            <div class="about_wrapper">
-                <h3 class="profile_img"><img src="images/profile.png" alt="profile"></h3>
-                <p>元ネイリストです。 <br>
-                    退職後は営業事務や一般事務職の経験をし現在コーヒー屋の奥さんと２児の母をしています。<br>
-                    細かい作業を黙々とすることが好きで趣味は手芸全般です。<br>
-                    やりたいことや好きを形に表現できる楽しさや喜びを知っています。
-                    だから、1人1人の思いをじっくり聞き取り一緒に形にするお手伝いをしたいと思います。</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="skill">
-        <div class="skill_wrap">
-            <h2><img src="images/skill.png" alt="skill_logo" class="skill"></h2>
-            <div class="skill_wrapper">
-                <div class="skill_col">
-                    <div class="skill_group">
-                        <h3>デザイン</h3>
-                        <img src="images/design.png" alt="designのアイコン">
-                    </div>
-                    <div class="skill_title">
-                        <div class="ai animation">
-                            <img src="images/Ai_img.svg" alt="ai_img">
-                            <img src="images/Ai_logo.png" alt="ai_logo" class="ai_menu">
-                        </div>
-                        <div class="ps animation">
-                            <img src="images/Ps_img.svg" alt="ps_img">
-                            <img src="images/Ps_logo.png" alt="ps_logo" class="ps_menu">
-                        </div>
-                    </div>
-                    <p class="skill_p">デザインの基礎を学び様々なテーマに合わせてデザインカンプを作成することが出来ます。<br>
-                        またユーザ目線を忘れずに使いやすいデザインをご提案します。
-                    </p>
-                </div>
-
-                <div class="skill_col">
-                    <div class="skill_group">
-                        <h3>コーディング</h3>
-                        <img src="images/coding.png" alt="codingのアイコン">
-                    </div>
-                    <div class="skill_title">
-                        <div class="html_css animation">
-                            <img src="images/html_css_img.svg" alt="html_css_img">
-                            <img src="images/html_css_logo.png" alt="html_css_logo" class="html_css_menu">
-                        </div>
-                        <div class="js animation">
-                            <img src="images/js_img.svg" alt="jS_img">
-                            <img src="images/js_logo.png" alt="jS_logo" class="js_menu">
-                        </div>
-                    </div>
-                    <p class="skill_p">HTML,CSSを使用しわかりやすい丁寧なコーディングを心がけています。
-                        またj Queryなどを使用し動きのあるサイトの実装も行います。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="gallery">
-        <div class="gallery_wrap">
-            <div class="gallery_logo">
-                <h2><img src="images/gallery.png" alt="gallery"></h2>
-            </div>
-            <div class="gallery_wrapper">
+    <div id="container">
+        <header class="header">
+            <nav class="pc_nav">
                 <ul>
-                    <li><img src="images/salon_HP.jpg" alt="hair_salon" class="gallery_img">
-                        <div class="gallery_title">solonサイト</div>
-                    </li>
-                    <li>
-                        <img src="images/design_cafe.jpg" alt="design_cafe" class="gallery_img">
-                        <div class="gallery_title">cafeサイト</div>
-                    </li>
-                    <li>
-                        <img src="images/Kadai_shibuya-02.jpg" alt="trace" class="gallery_img">
-                        <div class="gallery_title">トレース</div>
-                    </li>
-                    <li>
-                        <img src="images/kadai_03_shibuya_pop04ol.jpg" alt="web_banner" class="gallery_img">
-                        <div class="gallery_title">web用バナー</div>
-                    </li>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#skill">skill</a></li>
+                    <li><a href="#gallery">gallery</a></li>
+                    <li><a href="contact/index.html">contact</a></li>
                 </ul>
+            </nav>
+            <div class="sp_btn"><span></span></div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#gallery">gallery</a></li>
+                    <li><a href="contact/index.html">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <section id="home">
+            <div class="main_wrap">
+                <div class="main_first">
+                    <img src="images/hello.png" alt="あいさつ">
+                </div>
+                <div class="main_catch">
+                    <h1>
+                        <img src="images/title.png" alt="PORTFOLIO">
+                        <img src="images/name.png" alt="SHIBUYA AYUMI">
+
+                    </h1>
+                    <p class="catch_copy">大切に育ててきた思いを形にする<br class="sp_only"> お手伝いをしたい</p>
+                </div>
             </div>
 
+            <div class="scroll">
+                <div class="scrolldown"><span>Scroll</span></div>
+            </div>
+        </section>
 
-            <a href="#" class="btn">viem more</a>
+
+        <section id="about">
+            <div class="about_wrap">
+                <div class="about_base">
+                    <div class="fluid">
+                        <div class="fluid_obj obj01"></div>
+                        <div class="fluid_obj obj02"></div>
+                    </div>
+                    <div class="about_img">
+                        <img src="images/about_pic.jpg" alt="about写真">
+                    </div>
+                    <div class="sp_about">
+                        <img src="images/about_sp.jpg" alt="about写真_sp版">
+                    </div>
+                    <div class="about_title">
+                        <h2><img src="images/about_logo.png" alt="about"></h2>
+                    </div>
+
+                </div>
+                <div class="about_wrapper">
+                    <h3 class="profile_img"><img src="images/profile.png" alt="profile"></h3>
+                    <p>元ネイリストです。 <br>
+                        退職後は営業事務や一般事務職の経験をし現在コーヒー屋の奥さんと２児の母をしています。<br>
+                        細かい作業を黙々とすることが好きで趣味は手芸全般です。<br>
+                        やりたいことや好きを形に表現できる楽しさや喜びを知っています。
+                        だから、1人1人の思いをじっくり聞き取り一緒に形にするお手伝いをしたいと思います。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skill">
+            <div class="skill_wrap">
+                <h2><img src="images/skill.png" alt="skill_logo" class="skill"></h2>
+                <div class="skill_wrapper">
+                    <div class="skill_col">
+                        <div class="skill_group">
+                            <h3>デザイン</h3>
+                            <img src="images/design.png" alt="designのアイコン">
+                        </div>
+                        <div class="skill_title">
+                            <div class="ai ai_animation">
+                                <img src="images/Ai_img.svg" alt="ai_img">
+                                <img src="images/Ai_logo.png" alt="ai_logo" class="ai_menu">
+                            </div>
+                            <div class="ps ps_animation">
+                                <img src="images/Ps_img.svg" alt="ps_img">
+                                <img src="images/Ps_logo.png" alt="ps_logo" class="ps_menu">
+                            </div>
+                        </div>
+                        <p class="skill_p">デザインの基礎を学び様々なテーマに合わせてデザインカンプを作成することが出来ます。<br>
+                            またユーザ目線を忘れずに使いやすいデザインをご提案します。
+                        </p>
+                    </div>
+
+                    <div class="skill_col">
+                        <div class="skill_group">
+                            <h3>コーディング</h3>
+                            <img src="images/coding.png" alt="codingのアイコン">
+                        </div>
+                        <div class="skill_title">
+                            <div class="html_css animation">
+                                <img src="images/html_css_img.svg" alt="html_css_img">
+                                <img src="images/html_css_logo.png" alt="html_css_logo" class="html_css_menu">
+                            </div>
+                            <div class="js js_animation">
+                                <img src="images/js_img.svg" alt="jS_img">
+                                <img src="images/js_logo.png" alt="jS_logo" class="js_menu">
+                            </div>
+                        </div>
+                        <p class="skill_p">HTML,CSSを使用しわかりやすい丁寧なコーディングを心がけています。
+                            またj Queryなどを使用し動きのあるサイトの実装も行います。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="footer_wrap">
-            <nav>
-                <div class="footer_nav">
+        <section id="gallery">
+            <div class="gallery_wrap">
+                <div class="gallery_logo">
+                    <h2><img src="images/gallery.png" alt="gallery"></h2>
+                </div>
+                <div class="gallery_wrapper">
                     <ul>
-                        <li><a href="#home">home</a></li>
-                        <li><a href="#about">about</a></li>
-                        <li><a href="#gallery">gallery</a></li>
-                        <li><a href="#contact">contact</a></li>
+                        <li><a href="#"><img src="#" alt="portfolio" class="gallery_img">
+                                <div class="gallery_title">portfolio</div>
+                            </a></li>
+                        <li><a href="works/work1.html"><img src="images/kadai_03_shibuya_pop04ol.jpg" alt="web_banner"
+                                    class="gallery_img">
+                                <div class="gallery_title">web用バナー</div>
+                            </a></li>
+                        <li><a href="works/work2.html"><img src="images/salon_HP.jpg" alt="hair_salon"
+                                    class="gallery_img">
+                                <div class="gallery_title">solonサイト</div>
+                            </a></li>
+                        <li><a href="works/work3.html">
+                                <img src="images/design_cafe.jpg" alt="design_cafe" class="gallery_img">
+                                <div class="gallery_title">cafeサイト</div>
+                            </a></li>
                     </ul>
                 </div>
+
+                <div class="gallery_wrapper hide">
+                    <ul class="gallery_hide">
+                        <li><a href="works/work4.html"><img src="images/Kadai_shibuya-02.jpg" alt="trace"
+                                    class="gallery_img">
+                                <div class="gallery_title">トレース</div>
+                            </a></li>
+                        <li class="visibiliry-hidden"><a href="works/work3.html">
+                                <img src="images/design_cafe.jpg" alt="design_cafe" class="gallery_img">
+                                <div class="gallery_title">cafeサイト</div>
+                            </a></li>
+                    </ul>
+                </div>
+
+                <p class="btn">viem more</p>
+
+                <script>
+                    // アコーディオン
+                    $(function () {
+                        $(".btn").on("click", function () {
+                            $('.gallery_hide').offset().top;
+                            $(this).toggleClass("on-click");
+                            $(".hide").slideToggle(1000);
+                            if ($(this).text() === 'close') {
+                                $(this).text('view more');
+                            } else {
+                                $(this).text('close');
+                            }
+                        });
+                    });
+                </script>
+
+            </div>
+        </section>
+
+        <footer class="footer">
+            <nav class="footer_nav">
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#gallery">gallery</a></li>
+                    <li><a href="contact/index.html">contact</a></li>
+                </ul>
             </nav>
             <div class="footer_catch">
                 <p>Thank you for your time</p>
@@ -185,22 +218,41 @@
             <div class="footer_copy">
                 <small>&copy;2024 SHIBUYA AYUMI</small>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <div>
-        <a href="index.html"><img src="images/top.png" alt="topに戻る" class="page_top"></a>
-        <a href="contact/index.html"><img src="images/contact@2x.png" alt="お問合せ" class="sp_contact"></a>
+
+        <a href="index.html" class="page_top"><img src="images/top.png" alt="topに戻る"></a>
+        <a href="contact/index.html" class="sp_contact"><img src="images/contact@2x.png" alt="お問合せ"></a>
     </div>
-
     <script>
-        $(function () {
-            $('.sp_btn, .sp_nav li').on('click', function () {
-                $('.sp_nav').toggleClass();
-                $('.sp_btn').toggleClass('open');
-            });
+
+        $(window).on('load', function () {
+            var webStorage = function () {
+                if (sessionStorage.getItem('access')) {
+                    /*2回目以降アクセス時の処理*/
+                    $("#splash").addClass('is-active');
+                } else {
+                    //ロゴを1.2秒でフェードアウトする記述
+                    $("#splash-logo").delay(1200).fadeOut('slow');
+                    //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
+                    $("#splash").delay(1500).fadeOut('slow', function () {//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
+                        $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
+                    });
+                    //=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
+
+                    //=====ここから背景が伸びた後に動かしたいJSをまとめたい場合は
+                    $('.splashbg').on('animationend', function () {
+                        //この中に動かしたいJSを記載
+                    });
+                    //=====ここまで背景が伸びた後に動かしたいJSをまとめる
+                }
+            }
+            webStorage();
         });
     </script>
+
+    <script src="js/script.js"></script>
+
 </body>
 
 </html>

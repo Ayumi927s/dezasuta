@@ -38,6 +38,16 @@
     width: 100%;
     height: 100vh;
 }
+
+@keyframes scroll-anim {
+    from {
+        scale: 0 1;
+    }
+    to {
+        scale: 1 1;
+    }
+}
+
 /*
 @media screen and (max-width: 768px) {
     .scroll,
@@ -62,11 +72,12 @@
 .scrolldown span {
     /*描画位置*/
     position: absolute;
-    left: -4px;
+    left: -10px;
     bottom: 60px;
     /*テキストの形状*/
     color: #131313;
-    font-size: 0.7rem;
+    font-family: "prompt";
+    font-size: 1rem;
     letter-spacing: 0.05em;
     /*縦書き設定*/
     -ms-writing-mode: tb-rl;
@@ -421,8 +432,18 @@
 }
 
 /*アニメーション*/
-.animation {
+.ai_animation {
     animation: fuwafuwa 2s linear infinite;
+    scale: 1;
+}
+
+.ps_animation {
+    animation: fuwafuwa 3s linear infinite;
+    scale: 1;
+}
+
+.js_animation {
+    animation: fuwafuwa 1.5s linear infinite;
     scale: 1;
 }
 
@@ -479,7 +500,6 @@
 }
 
 .gallery_wrapper img {
-    margin: 0 20px 40px;
     border: 1px solid;
     border-radius: 20px;
 }
@@ -502,17 +522,19 @@
 .gallery_wrapper li {
     position: relative;
     width: 45%;
+    margin: 0 20px 40px;
 }
 
 .gallery_title {
     position: absolute;
-    top: 10px;
-    left: 35px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
     width: 95%;
-    height: 82%;
+    height: 92%;
     box-sizing: border-box;
     border-radius: 20px;
     opacity: 0;
@@ -525,10 +547,11 @@ li:hover .gallery_title {
     opacity: 1;
 }
 
+/*アコーディオン*/
 .btn {
     display: block;
     width: 334px;
-    margin: 0 auto;
+    margin: 0 auto 40px;
     padding: 20px 0;
     border: 1px solid #0010ec;
     border-radius: 40px;
@@ -539,7 +562,34 @@ li:hover .gallery_title {
     text-align: center;
     color: #0010ec;
 }
+.btn::after {
+    content: " ";
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-top: solid 2px #fff;
+    border-right: solid 2px #fff;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    right: 32px;
+    top: 24px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
 
+.btn.on-click::after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 45%;
+}
+
+.hide {
+    display: none;
+}
+
+.visibiliry-hidden {
+    visibility: hidden;
+}
 /*ここからSP版*/
 @media screen and (max-width: 767px) {
     .main_wrap {
