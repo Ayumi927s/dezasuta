@@ -100,6 +100,7 @@
     /*丸の動き1.6秒かけて透過し、永遠にループ*/
     animation: circlemove 1.6s ease-in-out infinite,
         cirlemovehide 1.6s ease-out infinite;
+    transform: scale(1);
 }
 
 /*下からの距離が変化して丸の全体が上から下に動く*/
@@ -129,7 +130,7 @@
 }
 
 /* 線の描写 */
-.scrolldown:after {
+.scrolldown::after {
     content: "";
     /*描画位置*/
     position: absolute;
@@ -495,10 +496,6 @@
     left: -25px;
 }
 
-.gallery_wrapper {
-    padding-bottom: 80px;
-}
-
 .gallery_wrapper img {
     border: 1px solid;
     border-radius: 20px;
@@ -551,7 +548,7 @@ li:hover .gallery_title {
 .btn {
     display: block;
     width: 334px;
-    margin: 0 auto 40px;
+    margin: 80px auto 40px;
     padding: 20px 0;
     border: 1px solid #0010ec;
     border-radius: 40px;
@@ -590,6 +587,7 @@ li:hover .gallery_title {
 .visibiliry-hidden {
     visibility: hidden;
 }
+
 /*ここからSP版*/
 @media screen and (max-width: 767px) {
     .main_wrap {
@@ -676,14 +674,14 @@ li:hover .gallery_title {
         margin: 0 auto;
         padding-bottom: 10px;
     }
-
+    .gallery_wrapper a {
+        overflow: visible;
+    }
     .gallery_logo {
         left: 20px;
     }
 
-    .footer_catch {
-        width: 90%;
-        margin: 0 auto;
-        padding-top: 160px;
+    .visibiliry-hidden {
+        visibility: visible;
     }
 }
