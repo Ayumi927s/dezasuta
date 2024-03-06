@@ -58,7 +58,7 @@
             </div>
 
             <div class="scroll">
-                <div class="scrolldown"><span>Scroll</span></div>
+                <div class="scrolldown active"><span>Scroll</span></div>
             </div>
         </section>
 
@@ -228,6 +228,12 @@
 
 
     <script>
+        $(function () {
+            $(".scrolldown").on('click', function () {
+                $(this).toggleClass("active");
+            });
+        });
+
         $(function () {
             /* スクロール量 代入用 */
             var scroll;

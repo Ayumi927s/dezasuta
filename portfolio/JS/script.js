@@ -1,4 +1,4 @@
-jQuery(function () {
+$(window).on("load", function () {
     var webStorage = function () {
         if (sessionStorage.getItem("access")) {
             /*2回目以降アクセス時の処理*/
