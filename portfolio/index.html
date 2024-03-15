@@ -84,11 +84,13 @@
                 </div>
                 <div class="about_wrapper">
                     <h3 class="profile_img"><img src="images/profile.png" alt="profile"></h3>
-                    <p>元ネイリストです。 <br>
-                        退職後は営業事務や一般事務職の経験をし現在コーヒー屋の奥さんと２児の母をしています。<br>
-                        細かい作業を黙々とすることが好きで趣味は手芸全般です。<br>
-                        やりたいことや好きを形に表現できる楽しさや喜びを知っています。
-                        だから、1人1人の思いをじっくり聞き取り一緒に形にするお手伝いをしたいと思います。</p>
+                    <p>焙煎屋の主人の仕事を手伝いながら、2児の母をしています<br>
+                        20代の頃はネイリストとして大阪で働き<br>
+                        30代は子育てに奮闘し（現在進行形ですが）新たなステージへステップアップするために
+                        以前から興味のあったwebデザイナーに挑戦しています。<br>
+                        もともと細かいことを黙々とすることや陰でサポートすることにやり甲斐を感じるタイプです。<br>
+                        一人一人に寄り添いながらsあーしたい、こーしたいを実現するお手伝いがしたいです。</p>
+
                 </div>
             </div>
         </section>
@@ -148,7 +150,7 @@
                 <div class="gallery_wrapper">
                     <ul>
                         <li><a href="#"><img src="#" alt="portfolio" class="gallery_img">
-                                <div class="gallery_title">portfolio</div>
+                                <div class="gallery_title">portfolio<span></span></div>
                             </a></li>
                         <li><a href="works/work1.html"><img src="images/kadai_03_shibuya_pop04ol.jpg" alt="web_banner"
                                     class="gallery_img">
@@ -180,21 +182,6 @@
 
                 <p class="btn">viem more</p>
 
-                <script>
-                    // アコーディオン
-                    $(function () {
-                        $(".btn").on("click", function () {
-                            $('.gallery_hide').offset().top;
-                            $(this).toggleClass("on-click");
-                            $(".hide").slideToggle(1000);
-                            if ($(this).text() === 'close') {
-                                $(this).text('view more');
-                            } else {
-                                $(this).text('close');
-                            }
-                        });
-                    });
-                </script>
 
             </div>
         </section>
@@ -228,12 +215,26 @@
 
 
     <script>
+        // アコーディオン
         $(function () {
-            $(".scrolldown").on('click', function () {
+            $(".btn").on("click", function () {
+                $('.gallery_hide').offset().top;
+                $(this).toggleClass("on-click");
+                $(".hide").slideToggle(1000);
+                if ($(this).text() === 'close') {
+                    $(this).text('view more');
+                } else {
+                    $(this).text('close');
+                }
+            });
+        });
+        //スクロールのアニメーション
+        $(function () {
+            $(".scrolldown:before").on('click', function () {
                 $(this).toggleClass("active");
             });
         });
-
+        //円の拡大
         $(function () {
             /* スクロール量 代入用 */
             var scroll;
@@ -245,10 +246,10 @@
                 /* コンソールログで確認  */
                 console.log(scroll);
                 /* 円の大きさ+スクロール量 / 50（調整）*/
-                sum = 1 + scroll / 50;
+                sum = 1 + scroll / 80;
                 console.log(sum);
                 /* 円の大きさにスクロール量を足す */
-                $(".scrolldown:before").css({
+                $(".scrolldown").css({
                     "transform": "scale(" + sum + ")"
                 })
             })

@@ -11,6 +11,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+
 </head>
 
 <body>
@@ -76,18 +77,12 @@
                 </tr>
             </table>
 
-            <div class="work_description">
-                <div class="work_desc">
-                    <img src="images/sub.png" alt="mark">
-                </div>
-                <h2 class="work_info">概要</h2>
+            <div class="work_description work_desc">
+                <h2 class="work_info"><span></span>概要</h2>
                 <p class="work_detail">10周年を機会にWebサイトのリニューアル</p>
             </div>
-            <div class="work_summary">
-                <div class="work_desc">
-                    <img src="images/sub.png" alt="mark">
-                </div>
-                <h2 class="work_info">デザインについて</h2>
+            <div class="work_summary work_desc">
+                <h2 class="work_info"><span></span>デザインについて</h2>
                 <p class="work_detail">認知向上、予約獲得及びSNSフォロワーupが目的だったので、SNSアイコンをメインビジュアルのロゴの上に配置し<br>
                     予約がどこからでもすぐにわかるようにreservationボタンを画面に固定しました。<br>
                     また、コーポレートカラーやコンセプトに基づきピンクをメインカラーにて可愛過ぎない配色を意識しました。
@@ -133,6 +128,15 @@
     </footer>
 
     <a href="../index.html" class="page_back"><img src="images/back.png" alt="前に戻る"></a>
+
+    <script>
+        $(function () {
+            lightbox.option({
+                'fitImagesInViewport': false,
+                'maxWidth': 400,
+            });
+        });
+    </script>
 
     <script src="../js/script.js"></script>
 </body>

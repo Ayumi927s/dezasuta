@@ -61,9 +61,6 @@
     position: absolute;
     bottom: 0px;
     left: 50%;
-}
-
-.scrolldown {
     text-align: center;
     margin-top: 110px;
 }
@@ -141,7 +138,13 @@
     height: 50px;
     background: #131313;
 }
+.scrolldown.active:before {
+    transform: scale(8);
+}
 
+.scrolldown:before {
+    transition: 0.5s;
+}
 /*aboutイメージ*/
 
 .fluid {
@@ -675,6 +678,7 @@ li:hover .gallery_title {
         padding-bottom: 10px;
     }
     .gallery_wrapper a {
+        display: block;
         overflow: visible;
     }
     .gallery_logo {

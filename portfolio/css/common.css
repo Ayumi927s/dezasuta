@@ -63,7 +63,7 @@ img {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-image: url(/images/loding.png);
+    background-image: url(../images/loding.png);
     background-size: cover;
     z-index: 9999999;
     text-align: center;
@@ -169,15 +169,14 @@ body.appear #container {
     font-family: "Prompt", sans-serif;
     font-weight: 300;
     font-style: normal;
-    overflow: hidden;
     position: relative;
     z-index: 1;
 }
 
 .pc_nav ul li a {
+    display: block;
     padding: 0 20px;
     border-radius: 40px;
-    line-height: 1;
 }
 
 .pc_nav ul li a::before {
@@ -378,6 +377,7 @@ button img {
         border-radius: 2px;
         background-color: #111;
         transition: 0.3s;
+        right: 0;
     }
 
     .sp_btn span::before {
@@ -388,6 +388,11 @@ button img {
     .sp_btn span::after {
         width: 70px;
         top: 10px;
+    }
+
+    .scrolldown.active:before {
+        transform: scale(10);
+        /*〜ここに変化後のプロパティを記載〜*/
     }
 
     /*ハンバーガーを閉じる*/
@@ -416,7 +421,7 @@ button img {
         left: 0;
         width: 100%;
         height: 100vh;
-        background-image: url(/images/menu@2x.png);
+        background-image: url(../images/menu@2x.png);
         background-size: cover;
         background-position: top;
         background-repeat: no-repeat;
